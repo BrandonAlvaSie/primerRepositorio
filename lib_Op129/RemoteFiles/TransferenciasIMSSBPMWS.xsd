@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://APTRIMS/TransferenciasIMSSBPMWS.tws" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl1="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/apcCifrasInicioTim" xmlns:intf="http://APTRIMS/TransferenciasIMSSBPMWS.tws" xmlns:wsdlsoap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <xsd:import namespace="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/apcCifrasInicioTim" schemaLocation="TransferenciasIMSSBPMWS_InlineSchema2.xsd"/>
+  <xsd:include schemaLocation="TransferenciasIMSSBPMWS_InlineSchema1.xsd"/>
+
+<!-- BEGIN Global group petaining to all wsdl:message definitions -->
+<!-- END Global group -->
+
+
+<!-- BEGIN Message Definitions for the wsdl:operations  -->
+<!-- END Message Definitions -->
+
+
+</xsd:schema>

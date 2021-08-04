@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmRoute.msgnode="ComIbmRoute.msgnode" xmlns:com_profuturo_op129_SF_CondicionesFinales.subflow="com/profuturo/op129/SF_CondicionesFinales.subflow" xmlns:com_profuturo_op129_SF_EnvioOP129Batch.subflow="com/profuturo/op129/SF_EnvioOP129Batch.subflow" xmlns:com_profuturo_op129_SF_ErrorEnvioOP.subflow="com/profuturo/op129/SF_ErrorEnvioOP.subflow" xmlns:com_profuturo_op129_SF_ValidacionEnvioOp129.subflow="com/profuturo/op129/SF_ValidacionEnvioOp129.subflow"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="com/profuturo/op129/SF_ProcesoBach.subflow" nsPrefix="com_profuturo_op129_SF_ProcesoBach.subflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" useDefaults="true" udpSupport="true">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <translation xmi:type="utility:TranslatableString" key="SF_ProcesoBach" bundleName="com/profuturo/op129/SF_ProcesoBach" pluginId="AP_Op129"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/AP_Op129/icons/full/obj16/SF_ProcesoBach.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/AP_Op129/icons/full/obj30/SF_ProcesoBach.gif"/>
+    <composition>
+      <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input" location="26,98">
+        <translation xmi:type="utility:TranslatableString" key="InTerminal.Input" bundleName="com/profuturo/op129/SF_ProcesoBach" pluginId="AP_Op129"/>
+      </nodes>
+      <nodes xmi:type="ComIbmRoute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="109,98">
+        <outTerminals terminalNodeID="envioO0129" dynamic="true" label="envioO0129"/>
+        <outTerminals terminalNodeID="validacioNeNVIO" dynamic="true" label="validacioNeNVIO"/>
+        <outTerminals terminalNodeID="conFin" dynamic="true" label="conFin"/>
+        <translation xmi:type="utility:ConstantString" string="Route"/>
+        <filterTable filterPattern="$Environment/envioOp129='true'" routingOutputTerminal="envioO0129"/>
+        <filterTable filterPattern="$Environment/valBatch='true'" routingOutputTerminal="validacioNeNVIO"/>
+        <filterTable filterPattern="$Environment/conFin='true'" routingOutputTerminal="conFin"/>
+      </nodes>
+      <nodes xmi:type="com_profuturo_op129_SF_EnvioOP129Batch.subflow:FCMComposite_1" xmi:id="FCMComposite_1_2" location="247,23">
+        <translation xmi:type="utility:ConstantString" string="SF_EnvioOP129Batch"/>
+      </nodes>
+      <nodes xmi:type="com_profuturo_op129_SF_ValidacionEnvioOp129.subflow:FCMComposite_1" xmi:id="FCMComposite_1_3" location="239,99">
+        <translation xmi:type="utility:ConstantString" string="SF_ValidacionEnvioOp129"/>
+      </nodes>
+      <nodes xmi:type="com_profuturo_op129_SF_ErrorEnvioOP.subflow:FCMComposite_1" xmi:id="FCMComposite_1_4" location="401,23">
+        <translation xmi:type="utility:ConstantString" string="SF_ErrorEnvioOP"/>
+      </nodes>
+      <nodes xmi:type="com_profuturo_op129_SF_CondicionesFinales.subflow:FCMComposite_1" xmi:id="FCMComposite_1_5" location="234,189">
+        <translation xmi:type="utility:ConstantString" string="SF_CondicionesFinales"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_1" sourceNode="InTerminal.Input" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_1" sourceTerminalName="envioO0129" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_1" sourceTerminalName="validacioNeNVIO" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.Output" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_5" targetNode="FCMComposite_1_5" sourceNode="FCMComposite_1_1" sourceTerminalName="conFin" targetTerminalName="InTerminal.Input"/>
+    </composition>
+    <propertyOrganizer/>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>

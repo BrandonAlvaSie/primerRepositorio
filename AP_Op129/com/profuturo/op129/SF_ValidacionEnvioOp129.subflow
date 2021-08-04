@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:SFInvocarWSv2.subflow="SFInvocarWSv2.subflow" xmlns:SFTrace.subflow="SFTrace.subflow" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:gen_com_profuturo_op129_ValidaOP129_TransferenciasIMSSBPMWS_SF_ValidacionEnvioOp129.subflow="gen/com/profuturo/op129/ValidaOP129_TransferenciasIMSSBPMWS_SF_ValidacionEnvioOp129.subflow"
+    xmlns:gen_com_profuturo_op129_consultaDetalleTransacciones_ControlBusService_SF_ValidacionEnvioOp129.subflow="gen/com/profuturo/op129/consultaDetalleTransacciones_ControlBusService_SF_ValidacionEnvioOp129.subflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="com/profuturo/op129/SF_ValidacionEnvioOp129.subflow" nsPrefix="com_profuturo_op129_SF_ValidacionEnvioOp129.subflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" useDefaults="true" udpSupport="true">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <translation xmi:type="utility:TranslatableString" key="SF_ValidacionEnvioOp129" bundleName="com/profuturo/op129/SF_ValidacionEnvioOp129" pluginId="AP_Op129"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/AP_Op129/icons/full/obj16/SF_ValidacionEnvioOp129.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/AP_Op129/icons/full/obj30/SF_ValidacionEnvioOp129.gif"/>
+    <composition>
+      <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input" location="23,156">
+        <translation xmi:type="utility:TranslatableString" key="InTerminal.Input" bundleName="com/profuturo/op129/SF_ValidacionEnvioOp129" pluginId="AP_Op129"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="109,156" computeExpression="esql://routine/com.profuturo.op129#SF_ValidacionEnvioOp129_xmlIn.Main">
+        <translation xmi:type="utility:ConstantString" string="xmlIn"/>
+      </nodes>
+      <nodes xmi:type="gen_com_profuturo_op129_consultaDetalleTransacciones_ControlBusService_SF_ValidacionEnvioOp129.subflow:FCMComposite_1" xmi:id="FCMComposite_1_2" location="445,324">
+        <translation xmi:type="utility:ConstantString" string="consultaDetalleTransacciones"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Invokes WSDL operation and extracts the response from SOAP message."/>
+        <longDescription xmi:type="utility:ConstantString" string="This subflow invokes the WSDL operation and extracts message body from the response message."/>
+      </nodes>
+      <nodes xmi:type="SFInvocarWSv2.subflow:FCMComposite_1" xmi:id="FCMComposite_1_3" location="202,157" SaltarRespuesta="true" WebServiceURL="javaTimOP129">
+        <translation xmi:type="utility:ConstantString" string="consultarSolEnviadas"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="347,153" computeExpression="esql://routine/com.profuturo.op129#SF_ValidacionEnvioOp129_loopValidacion.Main">
+        <translation xmi:type="utility:ConstantString" string="loopValidacion"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="853,218" computeExpression="esql://routine/com.profuturo.op129#SF_ValidacionEnvioOp129_controlarError.Main">
+        <translation xmi:type="utility:ConstantString" string="controlarError"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="715,335" computeExpression="esql://routine/com.profuturo.op129#SF_ValidacionEnvioOp129_validarEnvio.Main">
+        <translation xmi:type="utility:ConstantString" string="validarEnvio"/>
+      </nodes>
+      <nodes xmi:type="SFInvocarWSv2.subflow:FCMComposite_1" xmi:id="FCMComposite_1_7" location="789,336" SaltarRespuesta="true" WebServiceURL="javaTim">
+        <translation xmi:type="utility:ConstantString" string="actualizarSolictud"/>
+      </nodes>
+      <nodes xmi:type="gen_com_profuturo_op129_ValidaOP129_TransferenciasIMSSBPMWS_SF_ValidacionEnvioOp129.subflow:FCMComposite_1" xmi:id="FCMComposite_1_8" location="544,154">
+        <translation xmi:type="utility:ConstantString" string="ucaValidacion"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Invokes WSDL operation and extracts the response from SOAP message."/>
+        <longDescription xmi:type="utility:ConstantString" string="This subflow invokes the WSDL operation and extracts message body from the response message."/>
+      </nodes>
+      <nodes xmi:type="SFTrace.subflow:FCMComposite_1" xmi:id="FCMComposite_1_9" location="656,156">
+        <translation xmi:type="utility:ConstantString" string="SFTrace"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="351,93" computeExpression="esql://routine/com.profuturo.op129#SF_ValidacionEnvioOp129_error_Consulta_.Main">
+        <translation xmi:type="utility:ConstantString" string="error Consulta "/>
+      </nodes>
+      <nodes xmi:type="SFTrace.subflow:FCMComposite_1" xmi:id="FCMComposite_1_11" location="484,154">
+        <translation xmi:type="utility:ConstantString" string="SFTrace1"/>
+      </nodes>
+      <nodes xmi:type="SFTrace.subflow:FCMComposite_1" xmi:id="FCMComposite_1_12" location="412,261">
+        <translation xmi:type="utility:ConstantString" string="SFTrace2"/>
+      </nodes>
+      <nodes xmi:type="SFTrace.subflow:FCMComposite_1" xmi:id="FCMComposite_1_13" location="619,332">
+        <translation xmi:type="utility:ConstantString" string="SFTrace3"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_1" sourceNode="InTerminal.Input" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.Output" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_5" targetNode="FCMComposite_1_5" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_6" targetNode="FCMComposite_1_5" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.fault" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_9" targetNode="FCMComposite_1_7" sourceNode="FCMComposite_1_6" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_10" targetNode="FCMComposite_1_5" sourceNode="FCMComposite_1_7" sourceTerminalName="OutTerminal.Output1" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_11" targetNode="FCMComposite_1_9" sourceNode="FCMComposite_1_8" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_12" targetNode="FCMComposite_1_9" sourceNode="FCMComposite_1_8" sourceTerminalName="OutTerminal.fault" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_13" targetNode="FCMComposite_1_9" sourceNode="FCMComposite_1_8" sourceTerminalName="OutTerminal.ValidaOP129Response" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_14" targetNode="FCMComposite_1_10" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.Output1" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_11" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_15" targetNode="FCMComposite_1_11" sourceNode="FCMComposite_1_10" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_16" targetNode="FCMComposite_1_8" sourceNode="FCMComposite_1_11" sourceTerminalName="OutTerminal.Output1" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_8" targetNode="FCMComposite_1_12" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.out1" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_17" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_12" sourceTerminalName="OutTerminal.Output1" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_18" targetNode="FCMComposite_1_13" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.consultaDetalleTransaccionesResponse" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_19" targetNode="FCMComposite_1_6" sourceNode="FCMComposite_1_13" sourceTerminalName="OutTerminal.Output1" targetTerminalName="InTerminal.in"/>
+    </composition>
+    <propertyOrganizer/>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>

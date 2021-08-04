@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://BusTramiteServiceControlExport/ControlBus" xmlns:bons0="http://BusTramiteServiceControlExport/ControlBus">
+    <xsd:include schemaLocation="Entry.xsd"/>
+	<xsd:complexType name="ConsultaDetalleNotificacionXMLResponse">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="datosNotificacionXml" type="bons0:Entry">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,12 @@
+BROKER SCHEMA com.profuturo.op129
+
+
+CREATE COMPUTE MODULE SF_EnvioOP129Batch_req
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		SET OutputRoot.XMLNSC.javaTim129:enviarOpXml.request.folioSolicitud=Environment.folio;
+		RETURN TRUE;
+	END;
+
+END MODULE;

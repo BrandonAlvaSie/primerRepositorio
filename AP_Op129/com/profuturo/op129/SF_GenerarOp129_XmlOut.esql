@@ -1,0 +1,12 @@
+BROKER SCHEMA com.profuturo.op129
+
+
+CREATE COMPUTE MODULE SF_GenerarOp129_XmlOut
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		 SET OutputRoot.XMLNSC.bus:generarOp129Response.succes=InputRoot.XMLNSC.javaTim129:generarOpXMLResponse.GenerarOpXMLResponse.success;
+		 SET OutputRoot.XMLNSC.bus:generarOp129Response.mensaje=InputRoot.XMLNSC.javaTim129:generarOpXMLResponse.GenerarOpXMLResponse.response.msgRet;
+		 
+		RETURN TRUE;
+	END;
+END MODULE;

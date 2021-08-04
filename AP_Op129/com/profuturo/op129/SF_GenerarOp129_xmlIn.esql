@@ -1,0 +1,18 @@
+BROKER SCHEMA com.profuturo.op129
+DECLARE javaTim129 NAMESPACE 'http://transferenciasimss.webservice.ws.nci.profuturo.mx/';
+DECLARE bus NAMESPACE 'http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129';
+
+
+
+CREATE COMPUTE MODULE SF_GenerarOp129_xmlIn
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	
+		SET OutputRoot.SOAP.Body.javaTim129:generarOpXML.request.folioSolicitud=InputRoot.XMLNSC.bus:generarOp129.folio;
+		SET OutputRoot.SOAP.Body.javaTim129:generarOpXML.request.usuCreacion=InputRoot.XMLNSC.bus:generarOp129.usuaio;
+		
+		
+		RETURN TRUE;
+	END;
+
+END MODULE;

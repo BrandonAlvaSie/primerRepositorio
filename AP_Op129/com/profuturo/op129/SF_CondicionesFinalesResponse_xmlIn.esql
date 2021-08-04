@@ -1,0 +1,15 @@
+BROKER SCHEMA com.profuturo.op129
+
+
+CREATE COMPUTE MODULE SF_CondicionesFinalesResponse_xmlIn
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET Environment.request=InputRoot.XMLNSC.bus:condicionesFinales;
+		SET Environment.conFin=true;
+	    SET OutputRoot.XMLNSC.bus:condicionesFinalesResponse.succes=TRUE;
+		SET OutputRoot.XMLNSC.bus:condicionesFinalesResponse.mensaje='operacion exitosa';
+		RETURN TRUE;
+	END;
+
+
+END MODULE;

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="ICatalogoSoapWS" targetNamespace="http://catalogo.webservice.ws.nci.profuturo.mx/" xmlns:ns1="http://catalogo.webservice.ws.nci.profuturo.mx/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="ICatalogoSoapWSService_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+          <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://catalogo.webservice.ws.nci.profuturo.mx/" version="1.0" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:tns="http://catalogo.webservice.ws.nci.profuturo.mx/">
+<xsd:include schemaLocation="ICatalogoSoapWSService_InlineSchema1.xsd"/>
+    </xs:schema>
+    </wsdl:types>
+  <wsdl:message name="consultar">
+    <wsdl:part element="ns1:consultar" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarPorRolesResponse">
+    <wsdl:part element="ns1:consultarPorRolesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarResponse">
+    <wsdl:part element="ns1:consultarResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarPorRoles">
+    <wsdl:part element="ns1:consultarPorRoles" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ICatalogoSoapWS">
+    <wsdl:operation name="consultar">
+      <wsdl:input message="ns1:consultar" name="consultar">
+    </wsdl:input>
+      <wsdl:output message="ns1:consultarResponse" name="consultarResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPorRoles">
+      <wsdl:input message="ns1:consultarPorRoles" name="consultarPorRoles">
+    </wsdl:input>
+      <wsdl:output message="ns1:consultarPorRolesResponse" name="consultarPorRolesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

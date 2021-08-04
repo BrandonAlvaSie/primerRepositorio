@@ -1,0 +1,35 @@
+
+BROKER SCHEMA com.profuturo.op129
+
+
+CREATE COMPUTE MODULE SF_ValidacionEnvioOp129_validarEnvio
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE javaTim NAMESPACE 'http://transferenciasimss.webservice.ws.nci.profuturo.mx/';
+
+		SET Environment.aceptado=FALSE;
+		FOR busResp AS InputRoot.XMLNSC.controlBus:consultaDetalleTransaccionesResponse.consultaDetalleTransaccionesResponse.listaDetalleTransacciones[] DO
+			IF busResp.idEstatusTransaccion=4703 THEN
+				SET Environment.aceptado=TRUE;
+			END IF;
+
+		END FOR ;
+
+		IF Environment.aceptado IS TRUE THEN
+			SET OutputRoot.SOAP.Body.javaTim:actualizarSolicitudTR.request.datosSolicitud.estatusSolicitud=6485;
+			SET OutputRoot.SOAP.Body.javaTim:actualizarSolicitudTR.request.datosSolicitud.indEnvioManual=0;
+			SET OutputRoot.SOAP.Body.javaTim:actualizarSolicitudTR.request.ListFolioSolicitudFilter.folioSolicitudFilter=Environment.Variables.folioEnEjecucion;
+
+		ELSE
+			SET OutputRoot.SOAP.Body.javaTim:actualizarSolicitudTR.request.datosSolicitud.idTransaccionBt=InputRoot.XMLNSC.controlBus:consultaDetalleTransaccionesResponse.consultaDetalleTransaccionesResponse.listaDetalleTransacciones[<].idTransaccion;
+			SET OutputRoot.SOAP.Body.javaTim:actualizarSolicitudTR.request.datosSolicitud.indEnvioManual=1;
+			SET OutputRoot.SOAP.Body.javaTim:actualizarSolicitudTR.request.ListFolioSolicitudFilter.folioSolicitudFilter=Environment.Variables.folioEnEjecucion;
+			SET Environment.solManual=Environment.solManual+1;
+		END IF;		
+
+
+		RETURN TRUE;
+	END;
+
+
+END MODULE;

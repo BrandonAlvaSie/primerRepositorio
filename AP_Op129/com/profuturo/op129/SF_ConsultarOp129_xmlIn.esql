@@ -1,0 +1,10 @@
+BROKER SCHEMA com.profuturo.op129
+
+
+CREATE COMPUTE MODULE SF_ConsultarOp129_xmlIn
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.SOAP.Body.javaTim129:consultaEnvioOpXML.request.folioSolicitud=InputRoot.XMLNSC.bus:consultarOp129.folio;
+		RETURN TRUE;
+	END;
+END MODULE;

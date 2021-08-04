@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="ITransfereciasImssOpXMLSoapWSService" targetNamespace="http://impl.transferenciasimss.webservice.ws.nci.profuturo.mx/" xmlns:ns1="http://transferenciasimss.webservice.ws.nci.profuturo.mx/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://impl.transferenciasimss.webservice.ws.nci.profuturo.mx/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="ITransfereciasImssOpXMLSoapWSServiceSoapBinding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:import location="ITransfereciasImssOpXMLSoapWSService_i.wsdl" namespace="http://transferenciasimss.webservice.ws.nci.profuturo.mx/">
+    </wsdl:import>
+  <wsdl:binding name="ITransfereciasImssOpXMLSoapWSServiceSoapBinding" type="ns1:ITransfereciasImssOpXMLSoapWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="enviarOpXml">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="enviarOpXml">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="enviarOpXmlResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEnvioOpXML">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultaEnvioOpXML">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultaEnvioOpXMLResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generarOpXML">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="generarOpXML">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="generarOpXMLResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaFoliosAceptados">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultaFoliosAceptados">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultaFoliosAceptadosResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSolicitudesEnviadas">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarSolicitudesEnviadas">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarSolicitudesEnviadasResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ITransfereciasImssOpXMLSoapWSService">
+    <wsdl:port binding="tns:ITransfereciasImssOpXMLSoapWSServiceSoapBinding" name="ITransfereciasImssOpXMLSoapWSPort">
+      <soap:address location="http://wasdesaft.profuturo-gnp.net:9080/mit-ben-ws/services/ITransfereciasImssOpXMLSoapWSService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

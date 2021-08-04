@@ -1,0 +1,35 @@
+
+
+Importing file: \mit-ben-ws\services\ITransfereciasImssOpXMLSoapWSService.wsdl
+
+The WSDL import will proceed with bindings ITransfereciasImssOpXMLSoapWSServiceSoapBinding.
+Creating wsdl schema document for RemoteFiles/ITransfereciasImssOpXMLSoapWSService.xsd.
+Parsing wsdl binding {http://impl.transferenciasimss.webservice.ws.nci.profuturo.mx/}ITransfereciasImssOpXMLSoapWSServiceSoapBinding.
+Parsing wsdl binding input enviarOpXml.
+Parsing wsdl binding output enviarOpXml.
+Parsing wsdl binding input consultaEnvioOpXML.
+Parsing wsdl binding output consultaEnvioOpXML.
+Parsing wsdl binding input generarOpXML.
+Parsing wsdl binding output generarOpXML.
+Parsing wsdl binding input consultaFoliosAceptados.
+Parsing wsdl binding output consultaFoliosAceptados.
+Parsing wsdl binding input consultarSolicitudesEnviadas.
+Parsing wsdl binding output consultarSolicitudesEnviadas.
+Processing doc style for operation enviarOpXml.
+Processing doc style for operation consultaEnvioOpXML.
+Processing doc style for operation generarOpXML.
+Processing doc style for operation consultaFoliosAceptados.
+Processing doc style for operation consultarSolicitudesEnviadas.
+Populating WSDL schema RemoteFiles/ITransfereciasImssOpXMLSoapWSService_wsdl.xsd.
+Creating file RemoteFiles/ITransfereciasImssOpXMLSoapWSService_wsdl.xsd in the workspace.
+Creating file /lib_Op129/ITransfereciasImssOpXMLSoapWSService_InlineSchema1.xsd in the workspace.
+Copying source WSDL ITransfereciasImssOpXMLSoapWSService?wsdl=ITransfereciasImssOpXMLSoapWS.wsdl to ITransfereciasImssOpXMLSoapWSService_i.wsdl.
+Copying source WSDL ITransfereciasImssOpXMLSoapWSService?WSDL to ITransfereciasImssOpXMLSoapWSService_s.wsdl.
+
+Elapsed time processing this message definition file: 0.357 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

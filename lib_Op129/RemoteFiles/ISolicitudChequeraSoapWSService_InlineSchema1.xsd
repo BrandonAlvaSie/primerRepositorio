@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://solicitudchequera.webservice.ws.nci.profuturo.mx/" version="1.0" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:ns1="http://solicitudchequera.webservice.ws.nci.profuturo.mx/" xmlns:tns="http://solicitudchequera.webservice.ws.nci.profuturo.mx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xs:element ibmSchExtn:docRoot="true" name="actualizarSolicitudChequera" type="ns1:actualizarSolicitudChequera"/>
+<xs:element ibmSchExtn:docRoot="true" name="actualizarSolicitudChequeraResponse" type="ns1:actualizarSolicitudChequeraResponse"/>
+<xs:element ibmSchExtn:docRoot="true" name="consultarSaldosPreviosChequera" type="ns1:consultarSaldosPreviosChequera"/>
+<xs:element ibmSchExtn:docRoot="true" name="consultarSaldosPreviosChequeraResponse" type="ns1:consultarSaldosPreviosChequeraResponse"/>
+<xs:element ibmSchExtn:docRoot="true" name="consultarSolicitudChequera" type="ns1:consultarSolicitudChequera"/>
+<xs:element ibmSchExtn:docRoot="true" name="consultarSolicitudChequeraResponse" type="ns1:consultarSolicitudChequeraResponse"/>
+<xs:complexType name="actualizarSolicitudChequera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="ns1:solicitudChequeraFilterActualizacionBeanRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="solicitudChequeraFilterActualizacionBeanRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="datosSolicitud" type="ns1:solicitudChequeraActualizarBeanRequest"/>
+      <xs:element minOccurs="0" name="folioSolicitudFilter" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="solicitudChequeraActualizarBeanRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estatusSolicitud" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechAccion" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechEstatusSolicitud" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechVencimiento" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioChequera" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioLiquidacion" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioProcesar" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioSolicitud" type="xs:string"/>
+      <xs:element minOccurs="0" name="idSiefore" type="xs:string"/>
+      <xs:element minOccurs="0" name="idSubproceso" type="xs:string"/>
+      <xs:element minOccurs="0" name="idTipoSubcuenta" type="xs:string"/>
+      <xs:element minOccurs="0" name="idValorAccion" type="xs:string"/>
+      <xs:element minOccurs="0" name="montoAcciones" type="xs:string"/>
+      <xs:element minOccurs="0" name="montoPesos" type="xs:string"/>
+      <xs:element minOccurs="0" name="numCtaInvdual" type="xs:string"/>
+      <xs:element minOccurs="0" name="preMovGenerado" type="xs:string"/>
+      <xs:element minOccurs="0" name="usuActualizacion" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="actualizarSolicitudChequeraResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualizarSolicitudChequeraResponse" type="ns1:iSolicitudChequeraSoapWSActualizarSolicitudChequeraResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="iSolicitudChequeraSoapWSActualizarSolicitudChequeraResponse">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractWebServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="response" type="ns1:solicitudChequeraActualizarBeanResponse"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType abstract="true" name="abstractWebServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="errorCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="errorMessage" type="xs:string"/>
+      <xs:element minOccurs="0" name="errorTrace" type="xs:string"/>
+      <xs:element name="success" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="solicitudChequeraActualizarBeanResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="descRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="msgRet" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="consultarSolicitudChequera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="ns1:solicitudChequeraConsultarBeanRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="solicitudChequeraConsultarBeanRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="folioSolicitud" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="consultarSolicitudChequeraResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarSolicitudChequeraResponse" type="ns1:iSolicitudChequeraSoapWSConsultarSolicitudChequeraResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="iSolicitudChequeraSoapWSConsultarSolicitudChequeraResponse">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractWebServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="response" type="ns1:solicitudChequeraConsultarBeanResponse"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="solicitudChequeraConsultarBeanResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="descRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="msgRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="solicitudes">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="solicitud" type="ns1:solicitudChequeraVO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="solicitudChequeraVO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estatusSolicitud" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechAccion" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechActualizacion" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechCreacion" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechEstatusSolicitud" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechVencimiento" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioChequera" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioLiquidacion" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioProcesar" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioSolicitud" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioSolicitudFilter" type="xs:string"/>
+      <xs:element minOccurs="0" name="idSiefore" type="xs:string"/>
+      <xs:element minOccurs="0" name="idSolicitudChequera" type="xs:string"/>
+      <xs:element minOccurs="0" name="idSubproceso" type="xs:string"/>
+      <xs:element minOccurs="0" name="idTipoSubcuenta" type="xs:string"/>
+      <xs:element minOccurs="0" name="idValorAccion" type="xs:string"/>
+      <xs:element minOccurs="0" name="montoAcciones" type="xs:string"/>
+      <xs:element minOccurs="0" name="montoPesos" type="xs:string"/>
+      <xs:element minOccurs="0" name="numCtaInvdual" type="xs:string"/>
+      <xs:element minOccurs="0" name="preMovGenerado" type="xs:string"/>
+      <xs:element minOccurs="0" name="usuActualizacion" type="xs:string"/>
+      <xs:element minOccurs="0" name="usuCreacion" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="consultarSaldosPreviosChequera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="ns1:solicitudChequeraSaldosPreviosConsultarBeanRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="solicitudChequeraSaldosPreviosConsultarBeanRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="folioSolicitud" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="consultarSaldosPreviosChequeraResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarSaldosPreviosChequeraResponse" type="ns1:iSolicitudChequeraSoapWSConsultarSaldosPreviosChequeraResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="iSolicitudChequeraSoapWSConsultarSaldosPreviosChequeraResponse">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractWebServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="response" type="ns1:solicitudChequeraSaldosPreviosConsultarBeanResponse"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="solicitudChequeraSaldosPreviosConsultarBeanResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="descRet" type="xs:string"/>
+      <xs:element name="encontrados" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="msgRet" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

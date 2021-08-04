@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:SFTrace.subflow="SFTrace.subflow" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:gen_com_profuturo_op129_EnviarOP129_TransferenciasIMSSBPMWS_SF_EnviarOp129.subflow="gen/com/profuturo/op129/EnviarOP129_TransferenciasIMSSBPMWS_SF_EnviarOp129.subflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="com/profuturo/op129/SF_ErrorEnvioOP.subflow" nsPrefix="com_profuturo_op129_SF_ErrorEnvioOP.subflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" useDefaults="true" udpSupport="true">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <translation xmi:type="utility:TranslatableString" key="SF_ErrorEnvioOP" bundleName="com/profuturo/op129/SF_ErrorEnvioOP" pluginId="AP_Op129"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/AP_Op129/icons/full/obj16/SF_ErrorEnvioOP.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/AP_Op129/icons/full/obj30/SF_ErrorEnvioOP.gif"/>
+    <composition>
+      <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.Input" location="38,81">
+        <translation xmi:type="utility:TranslatableString" key="InTerminal.Input" bundleName="com/profuturo/op129/SF_ErrorEnvioOP" pluginId="AP_Op129"/>
+      </nodes>
+      <nodes xmi:type="SFTrace.subflow:FCMComposite_1" xmi:id="FCMComposite_1_2" location="342,82">
+        <translation xmi:type="utility:ConstantString" string="SFTrace"/>
+      </nodes>
+      <nodes xmi:type="SFTrace.subflow:FCMComposite_1" xmi:id="FCMComposite_1_4" location="635,84">
+        <translation xmi:type="utility:ConstantString" string="SFTrace1"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="121,80" computeExpression="esql://routine/com.profuturo.op129#SF_ErrorEnvioOP_ValidaError.Main">
+        <translation xmi:type="utility:ConstantString" string="ValidaError"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="232,81" computeExpression="esql://routine/com.profuturo.op129#SF_ErrorEnvioOP_errorEnvio.Main">
+        <translation xmi:type="utility:ConstantString" string="errorEnvio"/>
+      </nodes>
+      <nodes xmi:type="gen_com_profuturo_op129_EnviarOP129_TransferenciasIMSSBPMWS_SF_EnviarOp129.subflow:FCMComposite_1" xmi:id="FCMComposite_1_3" location="423,82">
+        <translation xmi:type="utility:ConstantString" string="EnviarOP129_TransferenciasIMSSBPMWS"/>
+        <shortDescription xmi:type="utility:ConstantString" string="Invokes WSDL operation and extracts the response from SOAP message."/>
+        <longDescription xmi:type="utility:ConstantString" string="This subflow invokes the WSDL operation and extracts message body from the response message."/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_7" targetNode="FCMComposite_1_6" sourceNode="InTerminal.Input" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_6" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_3" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.Output1" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_5" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.fault" targetTerminalName="InTerminal.Input"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_6" targetNode="FCMComposite_1_4" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.EnviarOP129Response" targetTerminalName="InTerminal.Input"/>
+    </composition>
+    <propertyOrganizer/>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Op129" targetNamespace="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://mx.profuturo/iib/iibException/IIBException">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="Op129SOAP" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129">
+    </xsd:schema>
+    <xsd:schema>
+<xsd:import namespace="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129" schemaLocation="op129.xsd">
+    	</xsd:import>
+    	<xsd:import
+    		namespace="http://mx.profuturo/iib/iibException/IIBException"
+    		schemaLocation="../Lib_Comun/IIBException.xsd">
+    	</xsd:import></xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="generarOp129Request">
+    <wsdl:part element="tns:generarOp129" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="generarOp129Response">
+    <wsdl:part element="tns:generarOp129Response" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="consultarOp129Request">
+  	<wsdl:part name="parameters" element="tns:consultarOp129"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarOp129Response">
+  	<wsdl:part name="parameters" element="tns:consultarOp129Response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarOp129Request">
+  	<wsdl:part name="parameters" element="tns:enviarOp129"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarOp129Response">
+  	<wsdl:part name="parameters" element="tns:enviarOp129Response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="condicionesFinalesRequest">
+  	<wsdl:part name="parameters" element="tns:condicionesFinales"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="condicionesFinalesResponse">
+  	<wsdl:part name="parameters" element="tns:condicionesFinalesResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generarOp129Fault">
+  	<wsdl:part name="parameters" element="xsd1:IIBExceptionFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarOp129Fault">
+  	<wsdl:part name="parameters" element="xsd1:IIBExceptionFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarOp129Fault">
+  	<wsdl:part name="parameters" element="xsd1:IIBExceptionFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="condicionesFinalesFault">
+  	<wsdl:part name="parameters" element="xsd1:IIBExceptionFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validicionEnvioOp129Request">
+  	<wsdl:part name="parameters" element="tns:validicionEnvioOp129"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validicionEnvioOp129Response">
+  	<wsdl:part name="parameters" element="tns:validicionEnvioOp129Response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="validicionEnvioOp129Fault">
+  	<wsdl:part name="fault" element="xsd1:IIBExceptionFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buca129Request">
+  	<wsdl:part name="parameters" element="tns:buca129"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buca129Response">
+  	<wsdl:part name="parameters" element="tns:buca129Response"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buca129Fault">
+  	<wsdl:part name="parameters" element="xsd1:IIBExceptionFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Op129">
+    <wsdl:operation name="generarOp129">
+      <wsdl:input message="tns:generarOp129Request"/>
+      <wsdl:output message="tns:generarOp129Response"/>
+            <wsdl:fault name="fault" message="tns:generarOp129Fault"></wsdl:fault>
+        </wsdl:operation>
+    <wsdl:operation name="consultarOp129">
+    	<wsdl:input message="tns:consultarOp129Request"></wsdl:input>
+    	<wsdl:output message="tns:consultarOp129Response"></wsdl:output>
+            <wsdl:fault name="fault" message="tns:consultarOp129Fault"></wsdl:fault>
+        </wsdl:operation>
+    <wsdl:operation name="enviarOp129">
+    	<wsdl:input message="tns:enviarOp129Request"></wsdl:input>
+    	<wsdl:output message="tns:enviarOp129Response"></wsdl:output>
+            <wsdl:fault name="fault" message="tns:enviarOp129Fault"></wsdl:fault>
+        </wsdl:operation>
+    <wsdl:operation name="condicionesFinales">
+    	<wsdl:input message="tns:condicionesFinalesRequest"></wsdl:input>
+    	<wsdl:output message="tns:condicionesFinalesResponse"></wsdl:output>
+            <wsdl:fault name="fault" message="tns:condicionesFinalesFault"></wsdl:fault>
+        </wsdl:operation>
+    <wsdl:operation name="validicionEnvioOp129">
+    	<wsdl:input message="tns:validicionEnvioOp129Request"></wsdl:input>
+    	<wsdl:output message="tns:validicionEnvioOp129Response"></wsdl:output>
+            <wsdl:fault name="fault" message="tns:validicionEnvioOp129Fault"></wsdl:fault>
+        </wsdl:operation>
+    <wsdl:operation name="buca129">
+    	<wsdl:input message="tns:buca129Request"></wsdl:input>
+    	<wsdl:output message="tns:buca129Response"></wsdl:output>
+            <wsdl:fault name="fault" message="tns:buca129Fault"></wsdl:fault>
+        </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Op129SOAP" type="tns:Op129">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="generarOp129">
+      <soap:operation soapAction="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129/generarOp129"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+        <wsdl:operation name="consultarOp129">
+      <soap:operation soapAction="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129/consultarOp129"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+        <wsdl:operation name="enviarOp129">
+      <soap:operation soapAction="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129/enviarOp129"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+        <wsdl:operation name="condicionesFinales">
+      <soap:operation soapAction="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129/condicionesFinales"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validicionEnvioOp129">
+      <soap:operation soapAction="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129/validicionEnvioOp129"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buca129">
+      <soap:operation soapAction="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129/buca129"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Op129">
+    <wsdl:port binding="tns:Op129SOAP" name="Op129SOAP">
+      <soap:address location="http://localhost:7800/iib/nci/TransferenciasIMSS/op129"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

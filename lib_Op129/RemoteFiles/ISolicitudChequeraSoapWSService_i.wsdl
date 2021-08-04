@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="ISolicitudChequeraSoapWS" targetNamespace="http://solicitudchequera.webservice.ws.nci.profuturo.mx/" xmlns:ns1="http://solicitudchequera.webservice.ws.nci.profuturo.mx/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="ISolicitudChequeraSoapWSService_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+          <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://solicitudchequera.webservice.ws.nci.profuturo.mx/" version="1.0" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:tns="http://solicitudchequera.webservice.ws.nci.profuturo.mx/">
+<xsd:include schemaLocation="ISolicitudChequeraSoapWSService_InlineSchema1.xsd"/>
+    </xs:schema>
+    </wsdl:types>
+  <wsdl:message name="consultarSolicitudChequeraResponse">
+    <wsdl:part element="ns1:consultarSolicitudChequeraResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarSolicitudChequera">
+    <wsdl:part element="ns1:consultarSolicitudChequera" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="actualizarSolicitudChequeraResponse">
+    <wsdl:part element="ns1:actualizarSolicitudChequeraResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarSaldosPreviosChequeraResponse">
+    <wsdl:part element="ns1:consultarSaldosPreviosChequeraResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarSaldosPreviosChequera">
+    <wsdl:part element="ns1:consultarSaldosPreviosChequera" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="actualizarSolicitudChequera">
+    <wsdl:part element="ns1:actualizarSolicitudChequera" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ISolicitudChequeraSoapWS">
+    <wsdl:operation name="actualizarSolicitudChequera">
+      <wsdl:input message="ns1:actualizarSolicitudChequera" name="actualizarSolicitudChequera">
+    </wsdl:input>
+      <wsdl:output message="ns1:actualizarSolicitudChequeraResponse" name="actualizarSolicitudChequeraResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSolicitudChequera">
+      <wsdl:input message="ns1:consultarSolicitudChequera" name="consultarSolicitudChequera">
+    </wsdl:input>
+      <wsdl:output message="ns1:consultarSolicitudChequeraResponse" name="consultarSolicitudChequeraResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSaldosPreviosChequera">
+      <wsdl:input message="ns1:consultarSaldosPreviosChequera" name="consultarSaldosPreviosChequera">
+    </wsdl:input>
+      <wsdl:output message="ns1:consultarSaldosPreviosChequeraResponse" name="consultarSaldosPreviosChequeraResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

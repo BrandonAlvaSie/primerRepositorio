@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://BusTramiteServiceControlExport/ControlBus" xmlns:bons0="http://BusTramiteServiceControlExport/ControlBus">
+	<xsd:include schemaLocation="DetalleTransaccion.xsd"/>
+	<xsd:complexType name="ConsultaDetalleTransaccionesResponse">
+		<xsd:sequence>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="listaDetalleTransacciones" type="bons0:DetalleTransaccion">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/apcCifrasInicioTim" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://APTRIMS/TransferenciasIMSSBPMWS.tws" xmlns:impl1="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/apcCifrasInicioTim" xmlns:intf="http://APTRIMS/TransferenciasIMSSBPMWS.tws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdlsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://APTRIMS/TransferenciasIMSSBPMWS.tws" schemaLocation="TransferenciasIMSSBPMWS_InlineSchema1.xsd">
+    <!--Add URI of the schema document for the imported namespace using 'schemaLocation' attribute.-->
+  </import>
+  <complexType name="detalleSolicitudClasificadaVO">
+    <sequence>
+      <element form="unqualified" maxOccurs="1" minOccurs="0" name="folioSolicitud" nillable="false" type="string"/>
+      <element form="unqualified" maxOccurs="1" minOccurs="0" name="numCuenta" nillable="false" type="string"/>
+    </sequence>
+  </complexType>
+  <complexType name="ArrayOf_detalleSolicitudClasificadaVO">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="impl1:detalleSolicitudClasificadaVO"/>
+    </sequence>
+  </complexType>
+  <complexType name="ArrayOf_string">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="string"/>
+    </sequence>
+  </complexType>
+</schema>

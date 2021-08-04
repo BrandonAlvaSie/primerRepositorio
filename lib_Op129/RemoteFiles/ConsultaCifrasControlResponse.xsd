@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://BusTramiteServiceControlExport/ControlBus" xmlns:bons0="http://BusTramiteServiceControlExport/ControlBus">
+	<xsd:include schemaLocation="CifraControl.xsd"/>
+	<xsd:complexType name="ConsultaCifrasControlResponse">
+		<xsd:sequence>
+
+
+
+
+
+
+
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="listaCifrasControl" type="bons0:CifraControl">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

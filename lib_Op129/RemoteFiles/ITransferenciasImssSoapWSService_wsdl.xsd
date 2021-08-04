@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://impl.transferenciasimss.webservice.ws.nci.profuturo.mx/" xmlns:ns1="http://transferenciasimss.webservice.ws.nci.profuturo.mx/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:tns="http://impl.transferenciasimss.webservice.ws.nci.profuturo.mx/">
+  <xsd:import namespace="http://transferenciasimss.webservice.ws.nci.profuturo.mx/" schemaLocation="ITransferenciasImssSoapWSService_InlineSchema1.xsd"/>
+
+<!-- BEGIN Global group petaining to all wsdl:message definitions -->
+<!-- END Global group -->
+
+
+<!-- BEGIN Message Definitions for the wsdl:operations  -->
+<!-- END Message Definitions -->
+
+
+</xsd:schema>

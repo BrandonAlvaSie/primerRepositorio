@@ -1,0 +1,11 @@
+BROKER SCHEMA com.profuturo.op129
+
+
+CREATE COMPUTE MODULE SF_ValidacionEnvioOp129_controlarError
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	SET Environment.valEn=true;
+		RETURN TRUE;
+	END;
+
+END MODULE;

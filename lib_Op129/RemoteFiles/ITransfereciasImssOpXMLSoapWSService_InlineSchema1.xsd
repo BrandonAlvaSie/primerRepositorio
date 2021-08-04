@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://transferenciasimss.webservice.ws.nci.profuturo.mx/" version="1.0" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:ns1="http://transferenciasimss.webservice.ws.nci.profuturo.mx/" xmlns:tns="http://transferenciasimss.webservice.ws.nci.profuturo.mx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xs:element ibmSchExtn:docRoot="true" name="consultaEnvioOpXML" type="ns1:consultaEnvioOpXML"/>
+<xs:element ibmSchExtn:docRoot="true" name="consultaEnvioOpXMLResponse" type="ns1:consultaEnvioOpXMLResponse"/>
+<xs:element ibmSchExtn:docRoot="true" name="consultaFoliosAceptados" type="ns1:consultaFoliosAceptados"/>
+<xs:element ibmSchExtn:docRoot="true" name="consultaFoliosAceptadosResponse" type="ns1:consultaFoliosAceptadosResponse"/>
+<xs:element ibmSchExtn:docRoot="true" name="consultarSolicitudesEnviadas" type="ns1:consultarSolicitudesEnviadas"/>
+<xs:element ibmSchExtn:docRoot="true" name="consultarSolicitudesEnviadasResponse" type="ns1:consultarSolicitudesEnviadasResponse"/>
+<xs:element ibmSchExtn:docRoot="true" name="enviarOpXml" type="ns1:enviarOpXml"/>
+<xs:element ibmSchExtn:docRoot="true" name="enviarOpXmlResponse" type="ns1:enviarOpXmlResponse"/>
+<xs:element ibmSchExtn:docRoot="true" name="generarOpXML" type="ns1:generarOpXML"/>
+<xs:element ibmSchExtn:docRoot="true" name="generarOpXMLResponse" type="ns1:generarOpXMLResponse"/>
+<xs:complexType name="enviarOpXml">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="ns1:transfereciasImssEnvioOpXMLBeanRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="transfereciasImssEnvioOpXMLBeanRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="folioSolicitud" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="enviarOpXmlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EnviarOpXmlResponse" type="ns1:iTransfereciasImssOpXMLSoapWSEnviarOpXmlResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="iTransfereciasImssOpXMLSoapWSEnviarOpXmlResponse">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractWebServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="response" type="ns1:transfereciasImssOpXMLBeanResponse"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType abstract="true" name="abstractWebServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="errorCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="errorMessage" type="xs:string"/>
+      <xs:element minOccurs="0" name="errorTrace" type="xs:string"/>
+      <xs:element name="success" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="transfereciasImssOpXMLBeanResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="desRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="msgRet" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="generarOpXML">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="ns1:transfereciasImssOpXMLBeanRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="transfereciasImssOpXMLBeanRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="folioSolicitud" type="xs:string"/>
+      <xs:element minOccurs="0" name="usuCreacion" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="generarOpXMLResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GenerarOpXMLResponse" type="ns1:iTransfereciasImssOpXMLSoapWSGenerarOpXMLResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="iTransfereciasImssOpXMLSoapWSGenerarOpXMLResponse">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractWebServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="response" type="ns1:transfereciasImssOpXMLBeanResponse"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="consultaEnvioOpXML">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="ns1:transfereciasImssOpXMLBeanRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="consultaEnvioOpXMLResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultaEnvioOpXMLResponse" type="ns1:iTransfereciasImssOpXMLSoapWSConsultaEnvioOpXMLResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="iTransfereciasImssOpXMLSoapWSConsultaEnvioOpXMLResponse">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractWebServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="response" type="ns1:transfereciasImssConsultarOpXMLBeanResponse"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="transfereciasImssConsultarOpXMLBeanResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cabezera" type="ns1:solicitudesEnviadasInfoVO"/>
+      <xs:element minOccurs="0" name="codRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="desRet" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listFolios" nillable="true" type="ns1:solicitudesReintentoVO"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listSolicitudes" nillable="true" type="ns1:solicitudesEnviadasTransImssVO"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listTotales" nillable="true" type="ns1:solicitudesEnviadasTransImssVO"/>
+      <xs:element minOccurs="0" name="msgRet" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="solicitudesEnviadasInfoVO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="enviadas" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaEnvio" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="pendientesEnvio" type="xs:string"/>
+      <xs:element minOccurs="0" name="totalProcedentes" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="solicitudesReintentoVO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="envioManual" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioProcesar" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioSolicitud" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="solicitudesEnviadasTransImssVO">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listDetalleSubcuenta" nillable="true" type="ns1:detalleSubcuentaEnviadasImssVO"/>
+      <xs:element minOccurs="0" name="tipoSolicitud" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="detalleSubcuentaEnviadasImssVO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aportacionEspecial" type="xs:string"/>
+      <xs:element minOccurs="0" name="aportacionEstatal" type="xs:string"/>
+      <xs:element minOccurs="0" name="cesantiaVejez" type="xs:string"/>
+      <xs:element minOccurs="0" name="clasificacion" type="xs:string"/>
+      <xs:element minOccurs="0" name="cuotaSocial" type="xs:string"/>
+      <xs:element minOccurs="0" name="numSolicitudes" type="xs:string"/>
+      <xs:element minOccurs="0" name="retiro97" type="xs:string"/>
+      <xs:element minOccurs="0" name="vivienda97" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="consultarSolicitudesEnviadas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="ns1:transfereciasImssOpXMLBeanRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="consultarSolicitudesEnviadasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarSolicitudesEnviadasResponse" type="ns1:iTransfereciasImssOpXMLSoapWSConsultarSolicitudesEnviadasResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="iTransfereciasImssOpXMLSoapWSConsultarSolicitudesEnviadasResponse">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractWebServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="response" type="ns1:solicitudesEnviadasOpXmlResponse"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="solicitudesEnviadasOpXmlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="desRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="msgRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="solicitudesEnviadas">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="solicitudEnv" type="ns1:detalleSolicitudes129EnviadasVO"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="solicitudesEnviar" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="detalleSolicitudes129EnviadasVO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="folioAgrupador" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioProcesar" type="xs:string"/>
+      <xs:element minOccurs="0" name="folioSolicitud" type="xs:string"/>
+      <xs:element minOccurs="0" name="nss" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="consultaFoliosAceptados">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="request" type="ns1:transfereciasImssOpXMLBeanRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="consultaFoliosAceptadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultaFoliosAceptadosResponse" type="ns1:iTransfereciasImssOpXMLSoapWSConsultaFoliosAceptadosResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="iTransfereciasImssOpXMLSoapWSConsultaFoliosAceptadosResponse">
+    <xs:complexContent>
+      <xs:extension base="ns1:abstractWebServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="response" type="ns1:foliosAceptadosTrasnferenciasImssResponse"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="foliosAceptadosTrasnferenciasImssResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codRet" type="xs:string"/>
+      <xs:element minOccurs="0" name="desRet" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="listSolicitudesAceptadas" nillable="true" type="ns1:consultaFoliosAceptadosTrasnfeImssVO"/>
+      <xs:element minOccurs="0" name="msgRet" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="consultaFoliosAceptadosTrasnfeImssVO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="diagnostico" type="xs:string"/>
+      <xs:element minOccurs="0" name="folio" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,62 @@
+
+
+
+BROKER SCHEMA com.profuturo.op129
+DECLARE chequera NAMESPACE 'http://solicitudchequera.webservice.ws.nci.profuturo.mx/';
+DECLARE ns NAMESPACE 'http://saldosprevios.webservice.ws.nci.profuturo.mx/';
+
+
+CREATE COMPUTE MODULE SF_CondicionesFinales_detEtatus
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE javaTim NAMESPACE 'http://transferenciasimss.webservice.ws.nci.profuturo.mx/';
+		FOR soli AS InputRoot.XMLNSC.javaTim129:consultaFoliosAceptadosResponse.ConsultaFoliosAceptadosResponse.response.listSolicitudesAceptadas[] DO
+			SET Environment.tem.folio=soli.folio;
+			SET Environment.tem.idSubproceso=soli.idSubproceso;
+
+			IF soli.diagnostico=7041 OR soli.diagnostico=7042 OR soli.diagnostico=7043 THEN --diagnostico 504 505 506 se rechaza solicitud y subetapa
+				SET Environment.tem.estatus=6488;
+				SET Environment.tem.bitacora=34;
+			END IF;
+
+			IF soli.diagnostico=7044 THEN
+				IF soli.folioSp IS NOT NULL THEN
+					SET OutputRoot.SOAP.Body.chequera:consultarSolicitudChequera.request.folioSolicitud=soli.folioSp;
+					PROPAGATE TO TERMINAL 'out2';
+					--RECUPERAR FOLIO DEL SP ,NO SIEMPRE LO TIENE SE BUSCA A CHECUERA SI TIENE ESTATUS PENDIENTE COBROSI LO TIENE SE ACTUALIZA A PENDIENTE DE TRANSFERIR-TABLA TIENE QUE SER SOLICITUD_CHEQUERA
+				END IF;
+				SET Environment.tem.estatus=6485;
+				SET Environment.tem.bitacora=33;
+			END IF;
+
+			IF soli.diagnostico=7040 THEN --diagnostico 502 o 509.notificacion aceptada y se finaliza subetapa
+				SET Environment.tem.estatus=6485;
+				SET Environment.tem.bitacora=33;
+			END IF;
+
+			IF soli.diagnostico=7039 THEN --501 se finaliza subetapa y estatus cifrasPrevias
+				SET Environment.tem.estatus=6480;
+				SET Environment.tem.bitacora=33;
+			END IF;
+			IF Environment.error IS NOT TRUE THEN
+				SET OutputRoot.SOAP.Body.javaTim:actualizarSolicitudTR.request.datosSolicitud.estatusSolicitud=Environment.tem.estatus;
+				SET OutputRoot.SOAP.Body.javaTim:actualizarSolicitudTR.request.ListFolioSolicitudFilter.folioSolicitudFilter=Environment.tem.folio;
+				PROPAGATE TO TERMINAL 'out1';
+			END IF;
+			IF Environment.error IS TRUE THEN
+				SET OutputRoot.XMLNSC.uca:CondicionesFinales.uca:folio=Environment.request.folio;
+				SET OutputRoot.XMLNSC.uca:CondicionesFinales.uca:mensaje='ocurrio un error en la ejecucion';
+				SET OutputRoot.XMLNSC.uca:CondicionesFinales.uca:estatus=false;
+				PROPAGATE TO TERMINAL 'out';
+				RETURN FALSE;
+			END IF;
+
+			DELETE FIELD Environment.tem;
+
+		END FOR;
+		SET OutputRoot.XMLNSC.uca:CondicionesFinales.uca:folio=Environment.request.folio;
+		SET OutputRoot.XMLNSC.uca:CondicionesFinales.uca:mensaje='operacion exitosa';
+		SET OutputRoot.XMLNSC.uca:CondicionesFinales.uca:estatus=true;
+	END;
+
+END MODULE;

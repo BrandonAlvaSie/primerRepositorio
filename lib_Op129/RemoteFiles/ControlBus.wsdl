@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="ControlBus" targetNamespace="http://www.profuturo-gnp.com.mx/interface/ControlBus" xmlns:bons1="http://www.profuturo-gnp.com.mx/mitafore/bo" xmlns:bons2="http://BusTramiteServiceControlExport/ControlBus" xmlns:tns="http://www.profuturo-gnp.com.mx/interface/ControlBus" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="ControlBus_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    
+          <xsd:schema targetNamespace="http://www.profuturo-gnp.com.mx/interface/ControlBus" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultarParametrosResponse.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultarParametrosRequest.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ExtraerReportesDeProcesoResponse.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ExtraerReportesDeProcesoRequest.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaMotivosRechazoResponse.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaMotivosRechazoRequest.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaDetalleNotificacionXMLResponse.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaDetalleNotificacionXMLRequest.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ReenvioPeticionesResponse.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ReenvioPeticionesRequest.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaDetalleTransaccionesResponse.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaDetalleTransaccionesRequest.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaCifrasControlResponse.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaCifrasControlRequest.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaOperacionesPorProcesoResponse.xsd"/>
+<xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaOperacionesPorProcesoRequest.xsd"/>
+<xsd:import namespace="http://www.profuturo-gnp.com.mx/mitafore/bo" schemaLocation="MITException.xsd"/>
+<xsd:include schemaLocation="ControlBus_InlineSchema1.xsd"/>
+    </xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="consultaDetalleNotificacionXMLRequestMsg">
+    <wsdl:part element="tns:consultaDetalleNotificacionXML" name="consultaDetalleNotificacionXMLParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaCifrasControlResponseMsg">
+    <wsdl:part element="tns:consultaCifrasControlResponse" name="consultaCifrasControlResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaDetalleTransaccionesResponseMsg">
+    <wsdl:part element="tns:consultaDetalleTransaccionesResponse" name="consultaDetalleTransaccionesResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarParametros_mitExceptionMsg">
+    <wsdl:part element="tns:consultarParametrosFault1_mitException" name="mitException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaMotivosRechazoRequestMsg">
+    <wsdl:part element="tns:consultaMotivosRechazo" name="consultaMotivosRechazoParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaOperacionesPorProcesoResponseMsg">
+    <wsdl:part element="tns:consultaOperacionesPorProcesoResponse" name="consultaOperacionesPorProcesoResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reenvioPeticionesResponseMsg">
+    <wsdl:part element="tns:reenvioPeticionesResponse" name="reenvioPeticionesResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reenvioPeticiones_mitExceptionMsg">
+    <wsdl:part element="tns:reenvioPeticionesFault1_mitException" name="mitException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaDetalleNotificacionXML_mitExceptionMsg">
+    <wsdl:part element="tns:consultaDetalleNotificacionXMLRequestFault1_mitException" name="mitException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaCifrasControlRequestMsg">
+    <wsdl:part element="tns:consultaCifrasControl" name="consultaCifrasControlParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaDetalleTransacciones_mitExceptionMsg">
+    <wsdl:part element="tns:consultaDetalleTransaccionesFault1_mitException" name="mitException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="operation1_mitExceptionMsg">
+    <wsdl:part element="tns:operation1Fault1_mitException" name="mitException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaOperacionesPorProcesoRequestMsg">
+    <wsdl:part element="tns:consultaOperacionesPorProceso" name="consultaOperacionesPorProcesoParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaCifrasControl_mitExceptionMsg">
+    <wsdl:part element="tns:consultaCifrasControlFault1_mitException" name="mitException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="extraerReportesDeProceso_mitExceptionMsg">
+    <wsdl:part element="tns:extraerReportesDeProcesoFault1_mitException" name="mitException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaOperacionesPorProceso_mitExceptionMsg">
+    <wsdl:part element="tns:consultaOperacionesPorProcesoFault1_mitException" name="mitException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reenvioPeticionesRequestMsg">
+    <wsdl:part element="tns:reenvioPeticiones" name="reenvioPeticionesParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaMotivosRechazoResponseMsg">
+    <wsdl:part element="tns:consultaMotivosRechazoResponse" name="consultaMotivosRechazoResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarParametrosResponseMsg">
+    <wsdl:part element="tns:consultarParametrosResponse" name="consultarParametrosResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="extraerReportesDeProcesoResponseMsg">
+    <wsdl:part element="tns:extraerReportesDeProcesoResponse" name="extraerReportesDeProcesoResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarParametrosRequestMsg">
+    <wsdl:part element="tns:consultarParametros" name="consultarParametrosParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="extraerReportesDeProcesoRequestMsg">
+    <wsdl:part element="tns:extraerReportesDeProceso" name="extraerReportesDeProcesoParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaDetalleNotificacionXMLResponseMsg">
+    <wsdl:part element="tns:consultaDetalleNotificacionXMLResponse" name="consultaDetalleNotificacionXMLResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaDetalleTransaccionesRequestMsg">
+    <wsdl:part element="tns:consultaDetalleTransacciones" name="consultaDetalleTransaccionesParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ControlBus">
+    <wsdl:operation name="consultaOperacionesPorProceso">
+      <wsdl:input message="tns:consultaOperacionesPorProcesoRequestMsg" name="consultaOperacionesPorProcesoRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:consultaOperacionesPorProcesoResponseMsg" name="consultaOperacionesPorProcesoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:consultaOperacionesPorProceso_mitExceptionMsg" name="mitException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaCifrasControl">
+      <wsdl:input message="tns:consultaCifrasControlRequestMsg" name="consultaCifrasControlRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:consultaCifrasControlResponseMsg" name="consultaCifrasControlResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:consultaCifrasControl_mitExceptionMsg" name="mitException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaDetalleTransacciones">
+      <wsdl:input message="tns:consultaDetalleTransaccionesRequestMsg" name="consultaDetalleTransaccionesRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:consultaDetalleTransaccionesResponseMsg" name="consultaDetalleTransaccionesResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:consultaDetalleTransacciones_mitExceptionMsg" name="mitException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reenvioPeticiones">
+      <wsdl:input message="tns:reenvioPeticionesRequestMsg" name="reenvioPeticionesRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:reenvioPeticionesResponseMsg" name="reenvioPeticionesResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:reenvioPeticiones_mitExceptionMsg" name="mitException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaDetalleNotificacionXML">
+      <wsdl:input message="tns:consultaDetalleNotificacionXMLRequestMsg" name="consultaDetalleNotificacionXMLRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:consultaDetalleNotificacionXMLResponseMsg" name="consultaDetalleNotificacionXMLResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:consultaDetalleNotificacionXML_mitExceptionMsg" name="mitException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaMotivosRechazo">
+      <wsdl:input message="tns:consultaMotivosRechazoRequestMsg" name="consultaMotivosRechazoRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:consultaMotivosRechazoResponseMsg" name="consultaMotivosRechazoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:operation1_mitExceptionMsg" name="mitException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="extraerReportesDeProceso">
+      <wsdl:input message="tns:extraerReportesDeProcesoRequestMsg" name="extraerReportesDeProcesoRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:extraerReportesDeProcesoResponseMsg" name="extraerReportesDeProcesoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:extraerReportesDeProceso_mitExceptionMsg" name="mitException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarParametros">
+      <wsdl:input message="tns:consultarParametrosRequestMsg" name="consultarParametrosRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:consultarParametrosResponseMsg" name="consultarParametrosResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:consultarParametros_mitExceptionMsg" name="mitException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

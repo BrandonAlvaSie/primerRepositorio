@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="ITransfereciasImssOpXMLSoapWS" targetNamespace="http://transferenciasimss.webservice.ws.nci.profuturo.mx/" xmlns:ns1="http://transferenciasimss.webservice.ws.nci.profuturo.mx/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="ITransfereciasImssOpXMLSoapWSService_InlineSchema1.xsd"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+          <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://transferenciasimss.webservice.ws.nci.profuturo.mx/" version="1.0" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:tns="http://transferenciasimss.webservice.ws.nci.profuturo.mx/">
+<xsd:include schemaLocation="ITransfereciasImssOpXMLSoapWSService_InlineSchema1.xsd"/>
+    </xs:schema>
+    </wsdl:types>
+  <wsdl:message name="generarOpXML">
+    <wsdl:part element="ns1:generarOpXML" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generarOpXMLResponse">
+    <wsdl:part element="ns1:generarOpXMLResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarOpXmlResponse">
+    <wsdl:part element="ns1:enviarOpXmlResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaFoliosAceptadosResponse">
+    <wsdl:part element="ns1:consultaFoliosAceptadosResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarSolicitudesEnviadasResponse">
+    <wsdl:part element="ns1:consultarSolicitudesEnviadasResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarSolicitudesEnviadas">
+    <wsdl:part element="ns1:consultarSolicitudesEnviadas" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaFoliosAceptados">
+    <wsdl:part element="ns1:consultaFoliosAceptados" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaEnvioOpXML">
+    <wsdl:part element="ns1:consultaEnvioOpXML" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultaEnvioOpXMLResponse">
+    <wsdl:part element="ns1:consultaEnvioOpXMLResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarOpXml">
+    <wsdl:part element="ns1:enviarOpXml" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ITransfereciasImssOpXMLSoapWS">
+    <wsdl:operation name="enviarOpXml">
+      <wsdl:input message="ns1:enviarOpXml" name="enviarOpXml">
+    </wsdl:input>
+      <wsdl:output message="ns1:enviarOpXmlResponse" name="enviarOpXmlResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generarOpXML">
+      <wsdl:input message="ns1:generarOpXML" name="generarOpXML">
+    </wsdl:input>
+      <wsdl:output message="ns1:generarOpXMLResponse" name="generarOpXMLResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaEnvioOpXML">
+      <wsdl:input message="ns1:consultaEnvioOpXML" name="consultaEnvioOpXML">
+    </wsdl:input>
+      <wsdl:output message="ns1:consultaEnvioOpXMLResponse" name="consultaEnvioOpXMLResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarSolicitudesEnviadas">
+      <wsdl:input message="ns1:consultarSolicitudesEnviadas" name="consultarSolicitudesEnviadas">
+    </wsdl:input>
+      <wsdl:output message="ns1:consultarSolicitudesEnviadasResponse" name="consultarSolicitudesEnviadasResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultaFoliosAceptados">
+      <wsdl:input message="ns1:consultaFoliosAceptados" name="consultaFoliosAceptados">
+    </wsdl:input>
+      <wsdl:output message="ns1:consultaFoliosAceptadosResponse" name="consultaFoliosAceptadosResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,55 @@
+
+
+
+BROKER SCHEMA com.profuturo.op129
+DECLARE uca NAMESPACE 'http://APTRIMS/TransferenciasIMSSBPMWS.tws';
+
+
+CREATE COMPUTE MODULE SF_ValidacionEnvioOp129_loopValidacion
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		SET Environment.solManual=0;
+		SET Environment.sinEnviar=InputRoot.XMLNSC.javaTim129:consultarSolicitudesEnviadasResponse.ConsultarSolicitudesEnviadasResponse.response.solicitudesEnviar;
+
+		FOR soli AS InputRoot.XMLNSC.javaTim129:consultarSolicitudesEnviadasResponse.ConsultarSolicitudesEnviadasResponse.response.solicitudesEnviadas.solicitudEnv[] DO
+            CREATE FIELD OutputRoot.XMLNSC.controlBus:consultaDetalleTransacciones.consultaDetalleTransaccionesRequest;
+			DECLARE bustra REFERENCE TO OutputRoot.XMLNSC.controlBus:consultaDetalleTransacciones.consultaDetalleTransaccionesRequest;
+			SET bustra.idOperacion=4694;
+			SET bustra.nss=soli.nss;
+			SET bustra.curp=soli.curp;
+			SET bustra.folioProcesar=soli.folioProcesar;
+			SET bustra.historico=false;
+			SET Environment.Variables.folioEnEjecucion=soli.folioSolicitud;
+			PROPAGATE TO TERMINAL 'out1';
+
+			IF Environment.valEn IS TRUE THEN
+				SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:folio=Environment.request.folio;
+				SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:mensaje='ocurrio un error en la ejecucion';
+				SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:estatus=false;
+				SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:contador=0;
+				SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:reintento=false;
+				PROPAGATE TO TERMINAL 'out';
+				RETURN FALSE;
+			END IF;
+		DELETE FIELD  Environment.Variables.folioEnEjecucion;
+		END FOR ;
+		
+		SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:folio=Environment.request.folio;
+		SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:mensaje='la ejecucion finalizo sin errores';
+		SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:estatus=true;
+		SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:contador=Environment.solManual;
+
+		IF Environment.sinEnviar IS TRUE OR Environment.solManual>0 THEN
+			SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:reintento=TRUE;
+		ELSE
+			SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:reintento=FALSE;
+		END IF;
+		
+
+
+
+		RETURN TRUE;
+	END;
+
+END MODULE;

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.profuturo-gnp.com.mx/interface/ControlBus" xmlns:bons1="http://www.profuturo-gnp.com.mx/mitafore/bo" xmlns:bons2="http://BusTramiteServiceControlExport/ControlBus" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:tns="http://www.profuturo-gnp.com.mx/interface/ControlBus" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+            <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultarParametrosResponse.xsd"/>
+            <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultarParametrosRequest.xsd"/>
+            <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ExtraerReportesDeProcesoResponse.xsd"/>
+            <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ExtraerReportesDeProcesoRequest.xsd"/>
+            <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaMotivosRechazoResponse.xsd"/>
+            <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaMotivosRechazoRequest.xsd"/>
+            <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaDetalleNotificacionXMLResponse.xsd"/>
+            <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaDetalleNotificacionXMLRequest.xsd"/>
+            <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ReenvioPeticionesResponse.xsd"/>
+            <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ReenvioPeticionesRequest.xsd"/>
+            <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaDetalleTransaccionesResponse.xsd"/>
+      <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaDetalleTransaccionesRequest.xsd"/>
+      <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaCifrasControlResponse.xsd"/>
+      <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaCifrasControlRequest.xsd"/>
+      <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaOperacionesPorProcesoResponse.xsd"/>
+      <xsd:import namespace="http://BusTramiteServiceControlExport/ControlBus" schemaLocation="ConsultaOperacionesPorProcesoRequest.xsd"/>
+      <xsd:import namespace="http://www.profuturo-gnp.com.mx/mitafore/bo" schemaLocation="MITException.xsd"/>
+      <xsd:element ibmSchExtn:docRoot="true" name="consultaOperacionesPorProceso">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaOperacionesPorProcesoRequest" nillable="true" type="bons2:ConsultaOperacionesPorProcesoRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element ibmSchExtn:docRoot="true" name="consultaOperacionesPorProcesoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaOperacionesPorProcesoResponse" nillable="true" type="bons2:ConsultaOperacionesPorProcesoResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element ibmSchExtn:docRoot="true" name="consultaOperacionesPorProcesoFault1_mitException" nillable="true" type="bons1:MITException"/>
+      <xsd:element ibmSchExtn:docRoot="true" name="consultaCifrasControl">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaCifrasControlRequest" nillable="true" type="bons2:ConsultaCifrasControlRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element ibmSchExtn:docRoot="true" name="consultaCifrasControlResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaCifrasControlResponse" nillable="true" type="bons2:ConsultaCifrasControlResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element ibmSchExtn:docRoot="true" name="consultaCifrasControlFault1_mitException" nillable="true" type="bons1:MITException"/>
+      <xsd:element ibmSchExtn:docRoot="true" name="consultaDetalleTransacciones">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaDetalleTransaccionesRequest" nillable="true" type="bons2:ConsultaDetalleTransaccionesRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element ibmSchExtn:docRoot="true" name="consultaDetalleTransaccionesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaDetalleTransaccionesResponse" nillable="true" type="bons2:ConsultaDetalleTransaccionesResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element ibmSchExtn:docRoot="true" name="consultaDetalleTransaccionesFault1_mitException" nillable="true" type="bons1:MITException"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="reenvioPeticiones">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="reenvioPeticionesRequest" nillable="true" type="bons2:ReenvioPeticionesRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element ibmSchExtn:docRoot="true" name="reenvioPeticionesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="reenvioPeticionesResponse" nillable="true" type="bons2:ReenvioPeticionesResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element ibmSchExtn:docRoot="true" name="reenvioPeticionesFault1_mitException" nillable="true" type="bons1:MITException"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="consultaDetalleNotificacionXML">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaDetalleNotificacionXMLRequest" nillable="true" type="bons2:ConsultaDetalleNotificacionXMLRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element ibmSchExtn:docRoot="true" name="consultaDetalleNotificacionXMLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaDetalleNotificacionXMLResponse" nillable="true" type="bons2:ConsultaDetalleNotificacionXMLResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element ibmSchExtn:docRoot="true" name="consultaDetalleNotificacionXMLRequestFault1_mitException" nillable="true" type="bons1:MITException"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="consultaMotivosRechazo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaMotivosRechazoRequest" nillable="true" type="bons2:ConsultaMotivosRechazoRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element ibmSchExtn:docRoot="true" name="consultaMotivosRechazoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultaMotivosRechazoResponse" nillable="true" type="bons2:ConsultaMotivosRechazoResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element ibmSchExtn:docRoot="true" name="operation1Fault1_mitException" nillable="true" type="bons1:MITException"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="extraerReportesDeProceso">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="extraerReportesDeProcesoRequest" nillable="true" type="bons2:ExtraerReportesDeProcesoRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element ibmSchExtn:docRoot="true" name="extraerReportesDeProcesoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="extraerReportesDeProcesoResponse" nillable="true" type="bons2:ExtraerReportesDeProcesoResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element ibmSchExtn:docRoot="true" name="extraerReportesDeProcesoFault1_mitException" nillable="true" type="bons1:MITException"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="consultarParametros">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarParametrosRequest" nillable="true" type="bons2:ConsultarParametrosRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element ibmSchExtn:docRoot="true" name="consultarParametrosResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="consultarParametrosResponse" nillable="true" type="bons2:ConsultarParametrosResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element ibmSchExtn:docRoot="true" name="consultarParametrosFault1_mitException" nillable="true" type="bons1:MITException"/>
+        </xsd:schema>

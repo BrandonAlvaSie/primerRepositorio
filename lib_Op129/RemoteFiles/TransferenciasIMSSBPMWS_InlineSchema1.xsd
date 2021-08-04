@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://APTRIMS/TransferenciasIMSSBPMWS.tws" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:impl="http://APTRIMS/TransferenciasIMSSBPMWS.tws" xmlns:impl1="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/apcCifrasInicioTim" xmlns:intf="http://APTRIMS/TransferenciasIMSSBPMWS.tws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdlsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/apcCifrasInicioTim" schemaLocation="TransferenciasIMSSBPMWS_InlineSchema2.xsd"/>
+  <element ibmSchExtn:docRoot="true" name="OP128">
+    <complexType>
+      <sequence>
+        <element name="xml" type="string"/>
+        <element name="cabecera" type="impl:cabecera"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="OP128Response">
+    <complexType>
+      <sequence>
+        <element name="estado" type="impl:EstadoOperacion"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="CalculoTIMS">
+    <complexType>
+      <sequence>
+        <element name="folio" type="string"/>
+        <element name="mensaje" type="string"/>
+        <element name="estatus" type="boolean"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="CalculoTIMSResponse">
+    <complexType>
+      <sequence>
+        <element name="estadoOperacion" type="impl:EstadoOperacion"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="MovimientosTIMS">
+    <complexType>
+      <sequence>
+        <element name="folio" type="string"/>
+        <element name="mensaje" type="string"/>
+        <element name="estatus" type="boolean"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="MovimientosTIMSResponse">
+    <complexType>
+      <sequence>
+        <element name="estadoOperacion" type="impl:EstadoOperacion"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="MovimientosChequeraTIMS">
+    <complexType>
+      <sequence>
+        <element name="folio" type="string"/>
+        <element name="mensaje" type="string"/>
+        <element name="estatus" type="boolean"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="MovimientosChequeraTIMSResponse">
+    <complexType>
+      <sequence>
+        <element name="estadoOperacion" type="impl:EstadoOperacion"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="EnviarOP129">
+    <complexType>
+      <sequence>
+        <element name="folio" type="string"/>
+        <element name="mensaje" type="string"/>
+        <element name="estatus" type="boolean"/>
+        <element name="tiempo" type="int"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="EnviarOP129Response">
+    <complexType>
+      <sequence>
+        <element name="estado" type="impl:EstadoOperacion"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="LiquidacionTIMS">
+    <complexType>
+      <sequence>
+        <element name="folio" type="string"/>
+        <element name="mensaje" type="string"/>
+        <element name="estatus" type="boolean"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="LiquidacionTIMSResponse">
+    <complexType>
+      <sequence>
+        <element name="estadoOperacion" type="impl:EstadoOperacion"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="ValidaOP129">
+    <complexType>
+      <sequence>
+        <element name="folio" type="string"/>
+        <element name="mensaje" type="string"/>
+        <element name="estatus" type="boolean"/>
+        <element name="contador" type="int"/>
+        <element name="reintento" type="boolean"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="ValidaOP129Response">
+    <complexType>
+      <sequence>
+        <element name="estado" type="impl:EstadoOperacion"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="RespuestaDesmarca">
+    <complexType>
+      <sequence>
+        <element name="folio" type="string"/>
+        <element name="proceso" type="string"/>
+        <element name="subproceso" type="string"/>
+        <element name="estatus" type="boolean"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="RespuestaDesmarcaResponse">
+    <complexType>
+      <sequence>
+        <element name="estadoOperacion" type="impl:EstadoOperacion"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="SimulacionUCA">
+    <complexType>
+      <sequence>
+        <element name="idInstancia" type="string"/>
+        <element name="mensaje" type="string"/>
+        <element name="success" type="boolean"/>
+        <element name="listaFoliosSolicitud" type="impl1:ArrayOf_detalleSolicitudClasificadaVO"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="SimulacionUCAResponse">
+    <complexType>
+      <sequence>
+        <element name="estadoOperacion" type="impl:EstadoOperacion"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="CondicionesFinales">
+    <complexType>
+      <sequence>
+        <element name="folio" type="string"/>
+        <element name="mensaje" type="string"/>
+        <element name="estatus" type="boolean"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element ibmSchExtn:docRoot="true" name="CondicionesFinalesResponse">
+    <complexType>
+      <sequence>
+        <element name="estadoOperacion" type="impl:EstadoOperacion"/>
+      </sequence>
+    </complexType>
+  </element>
+  <complexType name="cabecera">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="folioProcesar" nillable="false" type="string"/>
+      <element maxOccurs="1" minOccurs="0" name="folioTransaccion" nillable="false" type="string"/>
+    </sequence>
+  </complexType>
+  <complexType name="EstadoOperacion">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="exito" nillable="false" type="boolean"/>
+      <element maxOccurs="1" minOccurs="0" name="codigo" nillable="false" type="string"/>
+      <element maxOccurs="1" minOccurs="0" name="mensaje" nillable="false" type="string"/>
+    </sequence>
+  </complexType>
+</schema>

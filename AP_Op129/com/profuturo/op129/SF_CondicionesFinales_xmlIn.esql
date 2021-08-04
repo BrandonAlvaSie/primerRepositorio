@@ -1,0 +1,12 @@
+BROKER SCHEMA com.profuturo.op129
+
+
+CREATE COMPUTE MODULE SF_CondicionesFinales_xmlIn
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+        SET OutputRoot.SOAP.Body.javaTim129:consultaFoliosAceptados.request.folioSolicitud=Environment.request.folio;
+		RETURN TRUE;
+	END;
+
+END MODULE;

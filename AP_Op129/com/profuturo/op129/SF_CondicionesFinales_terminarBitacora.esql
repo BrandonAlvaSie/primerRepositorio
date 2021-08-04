@@ -1,0 +1,20 @@
+
+
+BROKER SCHEMA com.profuturo.op129
+DECLARE bita NAMESPACE 'http://bitacora.webservice.ws.nci.profuturo.mx/';
+
+
+CREATE COMPUTE MODULE SF_CondicionesFinales_terminarBitacora
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.SOAP.Body.bita:guardarBitacora.bitacoraBean.folio=Environment.tem.folio;
+		SET OutputRoot.SOAP.Body.bita:guardarBitacora.bitacoraBean.idEstatus=Environment.tem.bitacora;
+		SET OutputRoot.SOAP.Body.bita:guardarBitacora.bitacoraBean.idEtapa=Environment.request.idEtapa;
+		SET OutputRoot.SOAP.Body.bita:guardarBitacora.bitacoraBean.idResultado=0;
+		SET OutputRoot.SOAP.Body.bita:guardarBitacora.bitacoraBean.idSubetapa=Environment.request.idSubetapa;
+		SET OutputRoot.SOAP.Body.bita:guardarBitacora.bitacoraBean.idSubproceso=Environment.tem.idSubproceso;
+		SET OutputRoot.SOAP.Body.bita:guardarBitacora.bitacoraBean.usuario=Environment.request.usuario;
+
+		RETURN TRUE;
+	END;
+END MODULE;

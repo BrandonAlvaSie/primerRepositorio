@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://BusTramiteServiceControlExport/ControlBus">
+	<xsd:complexType name="CifraControl">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="claveOperacion" type="xsd:long">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="idOperacion" type="xsd:long">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="descripcionOperacion" type="xsd:string">
+			</xsd:element>
+
+
+			<xsd:element minOccurs="0" name="totalTransacciones" type="xsd:long">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="totalTransaccionesCompletas" type="xsd:long">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="totalTransaccionesParciales" type="xsd:long">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="totalTransaccionesRechazadas" type="xsd:long">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

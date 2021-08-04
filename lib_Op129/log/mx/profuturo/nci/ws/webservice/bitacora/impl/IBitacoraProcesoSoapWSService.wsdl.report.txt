@@ -1,0 +1,32 @@
+
+
+Importing file: \mit-ws\services\IBitacoraProcesoSoapWSService.wsdl
+
+The WSDL import will proceed with bindings IBitacoraProcesoSoapWSServiceSoapBinding.
+Creating wsdl schema document for RemoteFiles/IBitacoraProcesoSoapWSService.xsd.
+Parsing wsdl binding {http://impl.bitacora.webservice.ws.nci.profuturo.mx/}IBitacoraProcesoSoapWSServiceSoapBinding.
+Parsing wsdl binding input consultarBitacora.
+Parsing wsdl binding output consultarBitacora.
+Parsing wsdl binding input guardarListaBitacora.
+Parsing wsdl binding output guardarListaBitacora.
+Parsing wsdl binding input guardarBitacora.
+Parsing wsdl binding output guardarBitacora.
+Parsing wsdl binding input guardarBitacoraSolicitud.
+Parsing wsdl binding output guardarBitacoraSolicitud.
+Processing doc style for operation consultarBitacora.
+Processing doc style for operation guardarListaBitacora.
+Processing doc style for operation guardarBitacora.
+Processing doc style for operation guardarBitacoraSolicitud.
+Populating WSDL schema RemoteFiles/IBitacoraProcesoSoapWSService_wsdl.xsd.
+Creating file RemoteFiles/IBitacoraProcesoSoapWSService_wsdl.xsd in the workspace.
+Creating file /lib_Op129/IBitacoraProcesoSoapWSService_InlineSchema1.xsd in the workspace.
+Copying source WSDL IBitacoraProcesoSoapWSService?WSDL to IBitacoraProcesoSoapWSService_s.wsdl.
+Copying source WSDL IBitacoraProcesoSoapWSService?wsdl=IBitacoraProcesoSoapWS.wsdl to IBitacoraProcesoSoapWSService_i.wsdl.
+
+Elapsed time processing this message definition file: 0.371 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.profuturo-gnp.com.mx/mitafore/bo">
+	<xsd:complexType name="MITException">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="cveAplicacion" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="etapa" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="fechaExcepcionSistema" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="mensajeExcepcionAplicacion" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="message" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nombreServicio" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,50 @@
+
+
+Importing file: \ProcessCenter\teamworks\webservices\APTRIMS\TransferenciasIMSSBPMWS.wsdl
+
+The WSDL import will proceed with bindings soap12TransferenciasIMSSBPMWSSoapSoapBinding.
+Creating wsdl schema document for RemoteFiles/TransferenciasIMSSBPMWS.xsd.
+Parsing wsdl binding {http://APTRIMS/TransferenciasIMSSBPMWS.tws}soap12TransferenciasIMSSBPMWSSoapSoapBinding.
+Parsing wsdl binding input OP128.
+Parsing wsdl binding output OP128.
+Parsing wsdl binding input CalculoTIMS.
+Parsing wsdl binding output CalculoTIMS.
+Parsing wsdl binding input MovimientosTIMS.
+Parsing wsdl binding output MovimientosTIMS.
+Parsing wsdl binding input MovimientosChequeraTIMS.
+Parsing wsdl binding output MovimientosChequeraTIMS.
+Parsing wsdl binding input EnviarOP129.
+Parsing wsdl binding output EnviarOP129.
+Parsing wsdl binding input LiquidacionTIMS.
+Parsing wsdl binding output LiquidacionTIMS.
+Parsing wsdl binding input ValidaOP129.
+Parsing wsdl binding output ValidaOP129.
+Parsing wsdl binding input RespuestaDesmarca.
+Parsing wsdl binding output RespuestaDesmarca.
+Parsing wsdl binding input SimulacionUCA.
+Parsing wsdl binding output SimulacionUCA.
+Parsing wsdl binding input CondicionesFinales.
+Parsing wsdl binding output CondicionesFinales.
+Processing doc style for operation OP128.
+Processing doc style for operation CalculoTIMS.
+Processing doc style for operation MovimientosTIMS.
+Processing doc style for operation MovimientosChequeraTIMS.
+Processing doc style for operation EnviarOP129.
+Processing doc style for operation LiquidacionTIMS.
+Processing doc style for operation ValidaOP129.
+Processing doc style for operation RespuestaDesmarca.
+Processing doc style for operation SimulacionUCA.
+Processing doc style for operation CondicionesFinales.
+Populating WSDL schema RemoteFiles/TransferenciasIMSSBPMWS.xsd.
+Creating file RemoteFiles/TransferenciasIMSSBPMWS.xsd in the workspace.
+Creating file /lib_Op129/TransferenciasIMSSBPMWS_InlineSchema1.xsd in the workspace.
+Creating file /lib_Op129/TransferenciasIMSSBPMWS_InlineSchema2.xsd in the workspace.
+Copying source WSDL TransferenciasIMSSBPMWS.tws?wsdl to TransferenciasIMSSBPMWS.wsdl.
+
+Elapsed time processing this message definition file: 0.53 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

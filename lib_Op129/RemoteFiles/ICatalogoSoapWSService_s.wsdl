@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="ICatalogoSoapWSService" targetNamespace="http://impl.catalogo.webservice.ws.nci.profuturo.mx/" xmlns:ns1="http://catalogo.webservice.ws.nci.profuturo.mx/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://impl.catalogo.webservice.ws.nci.profuturo.mx/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="ICatalogoSoapWSServiceSoapBinding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:import location="ICatalogoSoapWSService_i.wsdl" namespace="http://catalogo.webservice.ws.nci.profuturo.mx/">
+    </wsdl:import>
+  <wsdl:binding name="ICatalogoSoapWSServiceSoapBinding" type="ns1:ICatalogoSoapWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="consultar">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultar">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPorRoles">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarPorRoles">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarPorRolesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ICatalogoSoapWSService">
+    <wsdl:port binding="tns:ICatalogoSoapWSServiceSoapBinding" name="ICatalogoSoapWSPort">
+      <soap:address location="http://wasdesaft.profuturo-gnp.net:9080/mit-ws/services/ICatalogoSoapWSService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

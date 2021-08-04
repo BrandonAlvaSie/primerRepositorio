@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129" xmlns="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+	<xsd:element ibmSchExtn:docRoot="true" name="generarOp129" type="generarOp129Type"/>
+	<xsd:element ibmSchExtn:docRoot="true" name="generarOp129Response" type="generarOp129ResponseType"/>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarOp129" type="consultarOp129Type"/>
+	<xsd:element ibmSchExtn:docRoot="true" name="consultarOp129Response" type="consultarOp129ResponseType"/>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="enviarOp129" type="enviarOp129Type"/>
+	<xsd:element ibmSchExtn:docRoot="true" name="enviarOp129Response" type="enviarOp129ResponseType"/>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="validicionEnvioOp129" type="validacionEnvioType"/>
+	<xsd:element ibmSchExtn:docRoot="true" name="validicionEnvioOp129Response" type="validacionEnvioResponseType"/>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="condicionesFinales" type="condicionesFinalesType"/>
+	<xsd:element ibmSchExtn:docRoot="true" name="condicionesFinalesResponse" type="condicionesFinalesResponseType"/>
+	
+	<xsd:element ibmSchExtn:docRoot="true" name="buca129" type="buca129Type"/>
+	<xsd:element ibmSchExtn:docRoot="true" name="buca129Response" type="buca129ResponseType"/>
+	
+	<xsd:complexType name="buca129Type">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" type="xsd:string" name="folio" />
+			<xsd:element maxOccurs="1" minOccurs="1" type="xsd:boolean" name="estatus" />	
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="buca129ResponseType">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" type="xsd:boolean" name="succes" />
+			<xsd:element maxOccurs="1" minOccurs="1" type="xsd:string" name="mensaje" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="generarOp129Type">
+		<xsd:sequence>
+		   <xsd:element maxOccurs="1" minOccurs="1"  type="xsd:string" name="folio"/>
+		   <xsd:element maxOccurs="1" minOccurs="1"  type="xsd:string" name="subproceso"/>
+		   <xsd:element maxOccurs="1" minOccurs="1"  type="xsd:string" name="etapa"/>
+		   <xsd:element maxOccurs="1" minOccurs="1"  type="xsd:string" name="subetapa"/>
+           <xsd:element maxOccurs="1" minOccurs="1"  type="xsd:string" name="usuaio"/>
+
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="diagnosticoType">
+		<xsd:sequence>
+           <xsd:element maxOccurs="unbounded" minOccurs="1"  type="xsd:string" name="diagnostico"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="folioType">
+		<xsd:sequence>
+           <xsd:element maxOccurs="unbounded" minOccurs="1"  type="xsd:string" name="folioSolicitud"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+
+	<xsd:complexType name="generarOp129ResponseType">
+		<xsd:sequence>
+		   <xsd:element maxOccurs="1" minOccurs="1"  type="xsd:boolean" name="succes"/>
+           <xsd:element maxOccurs="1" minOccurs="1"  type="xsd:string" name="mensaje"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+		<xsd:complexType name="consultarOp129Type">
+		<xsd:sequence>
+        	   <xsd:element maxOccurs="1" minOccurs="1"  type="xsd:string" name="folio"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="consultarOp129ResponseType">
+		<xsd:sequence>
+           <xsd:element maxOccurs="1" minOccurs="1" type="xsd:boolean" name="succes" />
+		<xsd:element maxOccurs="1" minOccurs="1" type="consultaResponseType" name="response" />    
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="enviarOp129Type">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" type="xsd:string" name="folio" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="enviarOp129ResponseType">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" type="xsd:boolean" name="succes" />
+			<xsd:element maxOccurs="1" minOccurs="1" type="xsd:string" name="mensaje" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+		<xsd:complexType name="condicionesFinalesType">
+		<xsd:sequence>
+         		 <xsd:element maxOccurs="1" minOccurs="1" type="xsd:string" name="folio" /> 
+         		 <xsd:element maxOccurs="1" minOccurs="1" type="xsd:string" name="idEtapa" /> 
+         		 <xsd:element maxOccurs="1" minOccurs="1" type="xsd:string" name="idSubetapa" />    
+         		 <xsd:element maxOccurs="1" minOccurs="1" type="xsd:string" name="usuario" />              
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="condicionesFinalesResponseType">
+		<xsd:sequence>
+         <xsd:element maxOccurs="1" minOccurs="1" type="xsd:boolean" name="succes" />
+		 <xsd:element maxOccurs="1" minOccurs="1" type="xsd:string" name="mensaje" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="validacionEnvioType">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" type="xsd:string" name="folio" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="validacionEnvioResponseType">
+		<xsd:sequence>
+           <xsd:element maxOccurs="1" minOccurs="1"  type="xsd:boolean" name="succes"/>
+           <xsd:element maxOccurs="1" minOccurs="1"  type="xsd:string" name="mensaje"/>
+		</xsd:sequence>
+	</xsd:complexType>
+		<xsd:complexType name="consultaResponseType">
+		<xsd:sequence>
+               <xsd:element minOccurs="0" name="cabezera" type="solicitudesEnviadasInfoVO"/>
+               <xsd:element minOccurs="0" name="codRet" type="xsd:string"/>
+               <xsd:element minOccurs="0" name="desRet" type="xsd:string"/>
+               <xsd:element maxOccurs="unbounded" minOccurs="0" name="listFolios"  type="solicitudesReintentoVO"/>
+               <xsd:element maxOccurs="unbounded" minOccurs="0" name="listSolicitudes"  type="solicitudesEnviadasTransImssVO"/>
+               <xsd:element maxOccurs="unbounded" minOccurs="0" name="listTotales"  type="solicitudesEnviadasTransImssVO"/>
+               <xsd:element minOccurs="0" name="msgRet" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+      
+          <xsd:complexType name="solicitudesEnviadasInfoVO">
+            <xsd:sequence>
+               <xsd:element minOccurs="0" maxOccurs="1" name="enviadas" type="xsd:string"/>
+               <xsd:element minOccurs="0" maxOccurs="1" name="fechaEnvio" type="xsd:dateTime"/> 
+               <xsd:element minOccurs="0" maxOccurs="1" name="pendientesEnvio" type="xsd:string"/>             
+                <xsd:element minOccurs="0" maxOccurs="1" name="totalNoProcedentes" type="xsd:string"/>
+               <xsd:element minOccurs="0" maxOccurs="1" name="totalProcedentes" type="xsd:string"/>                       
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="solicitudesReintentoVO">
+            <xsd:sequence>
+               <xsd:element minOccurs="0" maxOccurs="1" name="envioManual" type="xsd:string"/>
+               <xsd:element minOccurs="0" maxOccurs="1" name="folioProcesar" type="xsd:string"/>
+               <xsd:element minOccurs="0" maxOccurs="1" name="folioSolicitud" type="xsd:string"/>
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="solicitudesEnviadasTransImssVO">
+            <xsd:sequence>
+               <xsd:element maxOccurs="unbounded" minOccurs="0" name="listDetalleSubcuenta" nillable="true" type="detalleSubcuentaEnviadasImssVO"/>
+               <xsd:element minOccurs="0" maxOccurs="1"  name="tipoSolicitud" type="xsd:string"/>
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="detalleSubcuentaEnviadasImssVO">
+            <xsd:sequence>
+               <xsd:element minOccurs="0" maxOccurs="1" name="aportacionEspecial" type="xsd:double"/>
+               <xsd:element minOccurs="0" maxOccurs="1" name="aportacionEstatal" type="xsd:double"/>
+               <xsd:element minOccurs="0" maxOccurs="1" name="cesantiaVejez" type="xsd:double"/>
+               <xsd:element minOccurs="0" maxOccurs="1" name="clasificacion" type="xsd:string"/>
+               <xsd:element minOccurs="0" maxOccurs="1" name="cuotaSocial" type="xsd:double"/>
+               <xsd:element minOccurs="0" maxOccurs="1" name="numSolicitudes" type="xsd:int"/>
+               <xsd:element minOccurs="0" maxOccurs="1" name="retiro97" type="xsd:double"/>
+               <xsd:element minOccurs="0" maxOccurs="1" name="vivienda97" type="xsd:double"/>
+            </xsd:sequence>
+         </xsd:complexType>
+      
+      
+
+</xsd:schema>

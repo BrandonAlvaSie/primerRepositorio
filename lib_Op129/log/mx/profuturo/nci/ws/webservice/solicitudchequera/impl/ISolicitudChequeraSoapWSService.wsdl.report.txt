@@ -1,0 +1,29 @@
+
+
+Importing file: \mit-ben-ws\services\ISolicitudChequeraSoapWSService.wsdl
+
+The WSDL import will proceed with bindings ISolicitudChequeraSoapWSServiceSoapBinding.
+Creating wsdl schema document for RemoteFiles/ISolicitudChequeraSoapWSService.xsd.
+Parsing wsdl binding {http://impl.solicitudchequera.webservice.ws.nci.profuturo.mx/}ISolicitudChequeraSoapWSServiceSoapBinding.
+Parsing wsdl binding input actualizarSolicitudChequera.
+Parsing wsdl binding output actualizarSolicitudChequera.
+Parsing wsdl binding input consultarSaldosPreviosChequera.
+Parsing wsdl binding output consultarSaldosPreviosChequera.
+Parsing wsdl binding input consultarSolicitudChequera.
+Parsing wsdl binding output consultarSolicitudChequera.
+Processing doc style for operation actualizarSolicitudChequera.
+Processing doc style for operation consultarSaldosPreviosChequera.
+Processing doc style for operation consultarSolicitudChequera.
+Populating WSDL schema RemoteFiles/ISolicitudChequeraSoapWSService_wsdl.xsd.
+Creating file RemoteFiles/ISolicitudChequeraSoapWSService_wsdl.xsd in the workspace.
+Creating file /lib_Op129/ISolicitudChequeraSoapWSService_InlineSchema1.xsd in the workspace.
+Copying source WSDL ISolicitudChequeraSoapWSService?wsdl=ISolicitudChequeraSoapWS.wsdl to ISolicitudChequeraSoapWSService_i.wsdl.
+Copying source WSDL ISolicitudChequeraSoapWSService?wsdl to ISolicitudChequeraSoapWSService_s.wsdl.
+
+Elapsed time processing this message definition file: 0.409 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

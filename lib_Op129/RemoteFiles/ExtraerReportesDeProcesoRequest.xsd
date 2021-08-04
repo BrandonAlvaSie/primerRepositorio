@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://BusTramiteServiceControlExport/ControlBus">
+	<xsd:complexType name="ExtraerReportesDeProcesoRequest">
+		<xsd:sequence>
+
+
+
+
+
+
+
+
+			<xsd:element maxOccurs="1" minOccurs="0" name="fechaCreacionInicio" type="xsd:long">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="fechaCreacionFin" type="xsd:long">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="idOperacion" type="xsd:long">
+			</xsd:element>
+
+			<xsd:element maxOccurs="1" minOccurs="0" name="nss" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="curp" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="folioProcesar" type="xsd:string">
+			</xsd:element>
+
+
+
+			<xsd:element minOccurs="0" name="agrupado" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="historico" type="xsd:boolean">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

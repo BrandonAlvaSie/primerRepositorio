@@ -1,0 +1,17 @@
+
+
+BROKER SCHEMA com.profuturo.op129
+
+
+CREATE COMPUTE MODULE SF_ValidacionEnvioOp129_error_Consulta_
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:folio=Environment.request.folio;
+		SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:mensaje='ocurrio un error en la cosulta de java';
+		SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:estatus=false;
+		SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:contador=0;
+		SET OutputRoot.XMLNSC.uca:ValidaOP129.uca:reintento=false;
+		
+		RETURN TRUE;
+	END;
+END MODULE;

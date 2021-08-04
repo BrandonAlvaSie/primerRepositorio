@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://APTRIMS/TransferenciasIMSSBPMWS.tws" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://APTRIMS/TransferenciasIMSSBPMWS.tws" xmlns:impl1="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/apcCifrasInicioTim" xmlns:intf="http://APTRIMS/TransferenciasIMSSBPMWS.tws" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdlsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="TransferenciasIMSSBPMWS_InlineSchema1.xsd"/>
+        <generatedXSD location="TransferenciasIMSSBPMWS_InlineSchema2.xsd"/>
+        <binding hasEncoding="false" imported="true" name="soap12TransferenciasIMSSBPMWSSoapSoapBinding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    
+    
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://APTRIMS/TransferenciasIMSSBPMWS.tws" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+  <import namespace="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/apcCifrasInicioTim" schemaLocation="TransferenciasIMSSBPMWS_InlineSchema2.xsd"/>
+  <xsd:include schemaLocation="TransferenciasIMSSBPMWS_InlineSchema1.xsd"/>
+    </schema>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.profuturo.mx/iib/nci/TransferenciasIMSS/apcCifrasInicioTim">
+  <import namespace="http://APTRIMS/TransferenciasIMSSBPMWS.tws" schemaLocation="TransferenciasIMSSBPMWS_InlineSchema1.xsd">
+    <!--Add URI of the schema document for the imported namespace using 'schemaLocation' attribute.-->
+  </import>
+  <xsd:include schemaLocation="TransferenciasIMSSBPMWS_InlineSchema2.xsd"/>
+    </schema>
+    </wsdl:types>
+  <wsdl:message name="RespuestaDesmarcaRequest">
+    <wsdl:part element="impl:RespuestaDesmarca" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="LiquidacionTIMSResponse">
+    <wsdl:part element="impl:LiquidacionTIMSResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="OP128Request">
+    <wsdl:part element="impl:OP128" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CalculoTIMSResponse">
+    <wsdl:part element="impl:CalculoTIMSResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="LiquidacionTIMSRequest">
+    <wsdl:part element="impl:LiquidacionTIMS" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="EnviarOP129Request">
+    <wsdl:part element="impl:EnviarOP129" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SimulacionUCARequest">
+    <wsdl:part element="impl:SimulacionUCA" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="OP128Response">
+    <wsdl:part element="impl:OP128Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="MovimientosChequeraTIMSResponse">
+    <wsdl:part element="impl:MovimientosChequeraTIMSResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SimulacionUCAResponse">
+    <wsdl:part element="impl:SimulacionUCAResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ValidaOP129Response">
+    <wsdl:part element="impl:ValidaOP129Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="MovimientosChequeraTIMSRequest">
+    <wsdl:part element="impl:MovimientosChequeraTIMS" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="MovimientosTIMSRequest">
+    <wsdl:part element="impl:MovimientosTIMS" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ValidaOP129Request">
+    <wsdl:part element="impl:ValidaOP129" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RespuestaDesmarcaResponse">
+    <wsdl:part element="impl:RespuestaDesmarcaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="MovimientosTIMSResponse">
+    <wsdl:part element="impl:MovimientosTIMSResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CondicionesFinalesResponse">
+    <wsdl:part element="impl:CondicionesFinalesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CalculoTIMSRequest">
+    <wsdl:part element="impl:CalculoTIMS" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CondicionesFinalesRequest">
+    <wsdl:part element="impl:CondicionesFinales" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="EnviarOP129Response">
+    <wsdl:part element="impl:EnviarOP129Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TransferenciasIMSSBPMWSPortType">
+    <wsdl:operation name="OP128">
+      <wsdl:input message="impl:OP128Request" name="OP128Request">
+    </wsdl:input>
+      <wsdl:output message="impl:OP128Response" name="OP128Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculoTIMS">
+      <wsdl:input message="impl:CalculoTIMSRequest" name="CalculoTIMSRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:CalculoTIMSResponse" name="CalculoTIMSResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientosTIMS">
+      <wsdl:input message="impl:MovimientosTIMSRequest" name="MovimientosTIMSRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:MovimientosTIMSResponse" name="MovimientosTIMSResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientosChequeraTIMS">
+      <wsdl:input message="impl:MovimientosChequeraTIMSRequest" name="MovimientosChequeraTIMSRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:MovimientosChequeraTIMSResponse" name="MovimientosChequeraTIMSResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarOP129">
+      <wsdl:input message="impl:EnviarOP129Request" name="EnviarOP129Request">
+    </wsdl:input>
+      <wsdl:output message="impl:EnviarOP129Response" name="EnviarOP129Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LiquidacionTIMS">
+      <wsdl:input message="impl:LiquidacionTIMSRequest" name="LiquidacionTIMSRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:LiquidacionTIMSResponse" name="LiquidacionTIMSResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaOP129">
+      <wsdl:input message="impl:ValidaOP129Request" name="ValidaOP129Request">
+    </wsdl:input>
+      <wsdl:output message="impl:ValidaOP129Response" name="ValidaOP129Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RespuestaDesmarca">
+      <wsdl:input message="impl:RespuestaDesmarcaRequest" name="RespuestaDesmarcaRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:RespuestaDesmarcaResponse" name="RespuestaDesmarcaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SimulacionUCA">
+      <wsdl:input message="impl:SimulacionUCARequest" name="SimulacionUCARequest">
+    </wsdl:input>
+      <wsdl:output message="impl:SimulacionUCAResponse" name="SimulacionUCAResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CondicionesFinales">
+      <wsdl:input message="impl:CondicionesFinalesRequest" name="CondicionesFinalesRequest">
+    </wsdl:input>
+      <wsdl:output message="impl:CondicionesFinalesResponse" name="CondicionesFinalesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="soap12TransferenciasIMSSBPMWSSoapSoapBinding" type="impl:TransferenciasIMSSBPMWSPortType">
+    <wsdlsoap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="OP128">
+      <wsdlsoap12:operation soapAction="http://APTRIMS/TransferenciasIMSSBPMWS.tws/OP128"/>
+      <wsdl:input name="OP128Request">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="OP128Response">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculoTIMS">
+      <wsdlsoap12:operation soapAction="http://APTRIMS/TransferenciasIMSSBPMWS.tws/CalculoTIMS"/>
+      <wsdl:input name="CalculoTIMSRequest">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CalculoTIMSResponse">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientosTIMS">
+      <wsdlsoap12:operation soapAction="http://APTRIMS/TransferenciasIMSSBPMWS.tws/MovimientosTIMS"/>
+      <wsdl:input name="MovimientosTIMSRequest">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="MovimientosTIMSResponse">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientosChequeraTIMS">
+      <wsdlsoap12:operation soapAction="http://APTRIMS/TransferenciasIMSSBPMWS.tws/MovimientosChequeraTIMS"/>
+      <wsdl:input name="MovimientosChequeraTIMSRequest">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="MovimientosChequeraTIMSResponse">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarOP129">
+      <wsdlsoap12:operation soapAction="http://APTRIMS/TransferenciasIMSSBPMWS.tws/EnviarOP129"/>
+      <wsdl:input name="EnviarOP129Request">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="EnviarOP129Response">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LiquidacionTIMS">
+      <wsdlsoap12:operation soapAction="http://APTRIMS/TransferenciasIMSSBPMWS.tws/LiquidacionTIMS"/>
+      <wsdl:input name="LiquidacionTIMSRequest">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="LiquidacionTIMSResponse">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaOP129">
+      <wsdlsoap12:operation soapAction="http://APTRIMS/TransferenciasIMSSBPMWS.tws/ValidaOP129"/>
+      <wsdl:input name="ValidaOP129Request">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ValidaOP129Response">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RespuestaDesmarca">
+      <wsdlsoap12:operation soapAction="http://APTRIMS/TransferenciasIMSSBPMWS.tws/RespuestaDesmarca"/>
+      <wsdl:input name="RespuestaDesmarcaRequest">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RespuestaDesmarcaResponse">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SimulacionUCA">
+      <wsdlsoap12:operation soapAction="http://APTRIMS/TransferenciasIMSSBPMWS.tws/SimulacionUCA"/>
+      <wsdl:input name="SimulacionUCARequest">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SimulacionUCAResponse">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CondicionesFinales">
+      <wsdlsoap12:operation soapAction="http://APTRIMS/TransferenciasIMSSBPMWS.tws/CondicionesFinales"/>
+      <wsdl:input name="CondicionesFinalesRequest">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CondicionesFinalesResponse">
+        <wsdlsoap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransferenciasIMSSBPMWS">
+    <wsdl:port binding="impl:soap12TransferenciasIMSSBPMWSSoapSoapBinding" name="soap12TransferenciasIMSSBPMWSSoap">
+      <wsdlsoap12:address location="https://bpmdesaft:9444/ProcessCenter/teamworks/webservices/APTRIMS/TransferenciasIMSSBPMWS.tws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

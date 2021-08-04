@@ -1,0 +1,15 @@
+BROKER SCHEMA com.profuturo.op129
+
+
+CREATE COMPUTE MODULE SF_ValidacionEnvio_reponse
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		 SET Environment.request.folio=InputRoot.XMLNSC.bus:validicionEnvioOp129.folio;
+		 SET Environment.valBatch=true;
+		 SET OutputRoot.XMLNSC.bus:validicionEnvioOp129Response.succes=TRUE;
+		 SET OutputRoot.XMLNSC.bus:validicionEnvioOp129Response.mensaje='operacion exitosa';
+		 
+		RETURN TRUE;
+	END;
+
+END MODULE;

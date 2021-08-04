@@ -1,0 +1,22 @@
+
+
+Importing file: C:\Users\D0bleh\IBM\IIBT10\TimSvn\Contratos\op129\Op129.wsdl
+
+The WSDL import will proceed with bindings Op129SOAP.
+Creating wsdl schema document for file:///C:/Users/D0bleh/IBM/IIBT10/TimSvn/Contratos/op129/Op129.wsdl.
+Parsing wsdl binding {http://www.profuturo.mx/iib/nci/TransferenciasIMSS/op129}Op129SOAP.
+Parsing wsdl binding input generarOp129.
+Parsing wsdl binding output generarOp129.
+Processing doc style for operation generarOp129.
+Populating WSDL schema Op129_wsdl.xsd.
+Creating file Op129_wsdl.xsd in the workspace.
+Creating file /lib_Op129/op129.xsd in the workspace.
+Copying source WSDL Op129.wsdl to Op129.wsdl.
+
+Elapsed time processing this message definition file: 0.256 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

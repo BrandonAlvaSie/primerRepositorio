@@ -1,0 +1,75 @@
+
+
+Importing file: \BusTramiteServiceControlModWeb\sca\ControlBusWS.wsdl
+
+The WSDL import will proceed with bindings ControlBusBinding.
+Creating wsdl schema document for RemoteFiles/ControlBusService.xsd.
+Parsing wsdl binding {http://www.profuturo-gnp.com.mx/interface/ControlBus}ControlBusBinding.
+Parsing wsdl binding input consultaOperacionesPorProceso.
+Parsing wsdl binding output consultaOperacionesPorProceso.
+Parsing wsdl binding fault mitException.
+Parsing wsdl binding input consultaCifrasControl.
+Parsing wsdl binding output consultaCifrasControl.
+Parsing wsdl binding fault mitException.
+Parsing wsdl binding input consultaDetalleTransacciones.
+Parsing wsdl binding output consultaDetalleTransacciones.
+Parsing wsdl binding fault mitException.
+Parsing wsdl binding input reenvioPeticiones.
+Parsing wsdl binding output reenvioPeticiones.
+Parsing wsdl binding fault mitException.
+Parsing wsdl binding input consultaDetalleNotificacionXML.
+Parsing wsdl binding output consultaDetalleNotificacionXML.
+Parsing wsdl binding fault mitException.
+Parsing wsdl binding input consultaMotivosRechazo.
+Parsing wsdl binding output consultaMotivosRechazo.
+Parsing wsdl binding fault mitException.
+Parsing wsdl binding input extraerReportesDeProceso.
+Parsing wsdl binding output extraerReportesDeProceso.
+Parsing wsdl binding fault mitException.
+Parsing wsdl binding input consultarParametros.
+Parsing wsdl binding output consultarParametros.
+Parsing wsdl binding fault mitException.
+Processing doc style for operation consultaOperacionesPorProceso.
+Processing doc style for operation consultaCifrasControl.
+Processing doc style for operation consultaDetalleTransacciones.
+Processing doc style for operation reenvioPeticiones.
+Processing doc style for operation consultaDetalleNotificacionXML.
+Processing doc style for operation consultaMotivosRechazo.
+Processing doc style for operation extraerReportesDeProceso.
+Processing doc style for operation consultarParametros.
+Populating WSDL schema RemoteFiles/ControlBusWS.xsd.
+Creating file RemoteFiles/ControlBusWS.xsd in the workspace.
+Creating file RemoteFiles/ControlBus_InlineSchema1.xsd in the workspace.
+Creating file /lib_Op129/ConsultarParametrosResponse.xsd in the workspace.
+Creating file /lib_Op129/procesoOut.xsd in the workspace.
+Creating file /lib_Op129/ConsultarParametrosRequest.xsd in the workspace.
+Creating file /lib_Op129/ExtraerReportesDeProcesoResponse.xsd in the workspace.
+Creating file /lib_Op129/ExtraerReportesDeProcesoRequest.xsd in the workspace.
+Creating file /lib_Op129/ConsultaMotivosRechazoResponse.xsd in the workspace.
+Creating file /lib_Op129/MotivoRechazo.xsd in the workspace.
+Creating file /lib_Op129/ConsultaMotivosRechazoRequest.xsd in the workspace.
+Creating file /lib_Op129/ConsultaDetalleNotificacionXMLResponse.xsd in the workspace.
+Creating file /lib_Op129/Entry.xsd in the workspace.
+Creating file /lib_Op129/ConsultaDetalleNotificacionXMLRequest.xsd in the workspace.
+Creating file /lib_Op129/ReenvioPeticionesResponse.xsd in the workspace.
+Creating file /lib_Op129/ReenvioPeticionesRequest.xsd in the workspace.
+Creating file /lib_Op129/ConsultaDetalleTransaccionesResponse.xsd in the workspace.
+Creating file /lib_Op129/DetalleTransaccion.xsd in the workspace.
+Creating file /lib_Op129/ConsultaDetalleTransaccionesRequest.xsd in the workspace.
+Creating file /lib_Op129/ConsultaCifrasControlResponse.xsd in the workspace.
+Creating file /lib_Op129/CifraControl.xsd in the workspace.
+Creating file /lib_Op129/ConsultaCifrasControlRequest.xsd in the workspace.
+Creating file /lib_Op129/ConsultaOperacionesPorProcesoResponse.xsd in the workspace.
+Creating file /lib_Op129/Operacion.xsd in the workspace.
+Creating file /lib_Op129/ConsultaOperacionesPorProcesoRequest.xsd in the workspace.
+Creating file /lib_Op129/MITException.xsd in the workspace.
+Copying source WSDL ControlBusService.wsdl to ControlBusService.wsdl.
+Copying source WSDL ControlBus.wsdl to ControlBus.wsdl.
+
+Elapsed time processing this message definition file: 2.048 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

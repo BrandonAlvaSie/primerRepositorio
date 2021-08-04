@@ -1,0 +1,26 @@
+
+
+Importing file: \mit-ws\services\ICatalogoSoapWSService.wsdl
+
+The WSDL import will proceed with bindings ICatalogoSoapWSServiceSoapBinding.
+Creating wsdl schema document for RemoteFiles/ICatalogoSoapWSService.xsd.
+Parsing wsdl binding {http://impl.catalogo.webservice.ws.nci.profuturo.mx/}ICatalogoSoapWSServiceSoapBinding.
+Parsing wsdl binding input consultar.
+Parsing wsdl binding output consultar.
+Parsing wsdl binding input consultarPorRoles.
+Parsing wsdl binding output consultarPorRoles.
+Processing doc style for operation consultar.
+Processing doc style for operation consultarPorRoles.
+Populating WSDL schema RemoteFiles/ICatalogoSoapWSService_wsdl.xsd.
+Creating file RemoteFiles/ICatalogoSoapWSService_wsdl.xsd in the workspace.
+Creating file /lib_Op129/ICatalogoSoapWSService_InlineSchema1.xsd in the workspace.
+Copying source WSDL ICatalogoSoapWSService?wsdl to ICatalogoSoapWSService_s.wsdl.
+Copying source WSDL ICatalogoSoapWSService?wsdl=ICatalogoSoapWS.wsdl to ICatalogoSoapWSService_i.wsdl.
+
+Elapsed time processing this message definition file: 0.355 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

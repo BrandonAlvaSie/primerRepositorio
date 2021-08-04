@@ -1,0 +1,12 @@
+BROKER SCHEMA com.profuturo.op129
+
+
+CREATE COMPUTE MODULE SF_CondicionesFinales_error
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	SET Environment.error=true;
+		RETURN TRUE;
+	END;
+
+
+END MODULE;

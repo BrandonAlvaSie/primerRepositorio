@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="ControlBusService" targetNamespace="http://www.profuturo-gnp.com.mx/interface/ControlBus" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:this="http://www.profuturo-gnp.com.mx/interface/ControlBus">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <binding hasEncoding="false" imported="true" name="ControlBusBinding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:import location="ControlBus.wsdl" namespace="http://www.profuturo-gnp.com.mx/interface/ControlBus">
+    </wsdl:import>
+  <wsdl:binding name="ControlBusBinding" type="this:ControlBus">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="consultaOperacionesPorProceso">
+      <soap12:operation soapAction="http://www.profuturo-gnp.com.mx/interface/ControlBus/ControlBus/consultaOperacionesPorProceso"/>
+      <wsdl:input name="consultaOperacionesPorProcesoRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultaOperacionesPorProcesoResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="mitException">
+        <soap12:fault name="mitException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaCifrasControl">
+      <soap12:operation soapAction="http://www.profuturo-gnp.com.mx/interface/ControlBus/ControlBus/consultaCifrasControl"/>
+      <wsdl:input name="consultaCifrasControlRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultaCifrasControlResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="mitException">
+        <soap12:fault name="mitException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaDetalleTransacciones">
+      <soap12:operation soapAction="http://www.profuturo-gnp.com.mx/interface/ControlBus/ControlBus/consultaDetalleTransacciones"/>
+      <wsdl:input name="consultaDetalleTransaccionesRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultaDetalleTransaccionesResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="mitException">
+        <soap12:fault name="mitException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="reenvioPeticiones">
+      <soap12:operation soapAction="http://www.profuturo-gnp.com.mx/interface/ControlBus/ControlBus/reenvioPeticiones"/>
+      <wsdl:input name="reenvioPeticionesRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reenvioPeticionesResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="mitException">
+        <soap12:fault name="mitException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaDetalleNotificacionXML">
+      <soap12:operation soapAction="http://www.profuturo-gnp.com.mx/interface/ControlBus/ControlBus/consultaDetalleNotificacionXML"/>
+      <wsdl:input name="consultaDetalleNotificacionXMLRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultaDetalleNotificacionXMLResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="mitException">
+        <soap12:fault name="mitException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultaMotivosRechazo">
+      <soap12:operation soapAction="http://www.profuturo-gnp.com.mx/interface/ControlBus/ControlBus/consultaMotivosRechazo"/>
+      <wsdl:input name="consultaMotivosRechazoRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultaMotivosRechazoResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="mitException">
+        <soap12:fault name="mitException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="extraerReportesDeProceso">
+      <soap12:operation soapAction="http://www.profuturo-gnp.com.mx/interface/ControlBus/ControlBus/extraerReportesDeProceso"/>
+      <wsdl:input name="extraerReportesDeProcesoRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="extraerReportesDeProcesoResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="mitException">
+        <soap12:fault name="mitException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarParametros">
+      <soap12:operation soapAction="http://www.profuturo-gnp.com.mx/interface/ControlBus/ControlBus/consultarParametros"/>
+      <wsdl:input name="consultarParametrosRequest">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarParametrosResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="mitException">
+        <soap12:fault name="mitException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ControlBusService">
+    <wsdl:port binding="this:ControlBusBinding" name="ControlBusPort">
+      <soap12:address location="http://172.22.180.133:9000/BusTramiteServiceControlModWeb/sca/ControlBusWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
